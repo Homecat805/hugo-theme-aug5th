@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode }}" theme="{{ .Site.Params.colorScheme }}">
+    <head>
+        {{- partial "head.html" . -}} 
+    </head>
+    <body>    
+        {{- partial "header.html" . -}} 
+        {{- block "stage" . }}{{- end }}
+        {{- partial "footer.html" . -}} 
+        <!-- Javascripts -->
+        {{- partial "foot.html" . -}} 
+    </body>
+</html>

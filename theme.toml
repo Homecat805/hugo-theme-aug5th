@@ -1,0 +1,12 @@
+name = "Aug5th"
+license = "MIT"
+licenselink = "https://github.com/homecat805/hugo-theme-aug5th/blob/master/LICENSE"
+description = ""
+homepage = "https://aug5th.genway.com.cn/"
+tags = []
+features = []
+min_version = "0.111.3"
+
+[author]
+  name = "Homecat"
+  homepage = "https://genway.com.cn/"
