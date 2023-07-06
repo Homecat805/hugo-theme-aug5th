@@ -1,13 +1,35 @@
 <!DOCTYPE html>
 <html lang="{{ .Site.LanguageCode }}" theme="{{ .Site.Params.colorScheme }}">
     <head>
-        {{- partial "head.html" . -}} 
+        {{- partial "baseof/head.html" . -}} 
     </head>
     <body>    
-        {{- partial "header.html" . -}} 
-        {{- block "stage" . }}{{- end }}
-        {{- partial "footer.html" . -}} 
+        <header class="header-container">
+            <div>
+                {{- partial "header/logo.html" . -}} 
+            </div>
+            <div class="header-inner-container">
+                {{- partial "header/search.html" . -}}
+            </div>
+            <div>
+                {{- partial "header/toggle.html" . -}}
+            </div>
+        </header>
+        <div class="stage-container">
+            <aside id="sidebar" class="sidebar">
+
+            </aside>
+            <main class="stage">
+                <div class="stage-header"></div>
+                <div class="stage-center">
+                    {{- block "stage" . }}{{- end }}
+                </div>
+                <div class="stage-foot">
+                    {{- partial "stage/footer.html" . -}}
+                </div>
+            </main>
+        </div>
         <!-- Javascripts -->
-        {{- partial "foot.html" . -}} 
+        {{- partial "baseof/foot.html" . -}} 
     </body>
 </html>

@@ -16,6 +16,10 @@
 <link href={{ "favicon.png" | relURL }} rel="icon">
 <link href="{{ "./vendor/bootstrap-icons/1.10.5/font/bootstrap-icons.min.css" | relURL }}" rel="stylesheet">
 
+<!-- Fonts -->
+<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900">
+<link href="https://fonts.googleapis.com/css?family=Noto+Sans+SC:100,300,400,500,700,900" rel="stylesheet">
+
 <!-- Local CSS from SASS-->
 {{ $sass := resources.Get "sass/main.scss" }}
 {{ $style := $sass | resources.ToCSS (dict "targetPath" "css/main.css" ) }}

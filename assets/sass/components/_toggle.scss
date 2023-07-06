@@ -1,0 +1,21 @@
+.toggle {
+    padding: 0 1rem;
+    font-size: 1.5rem;
+
+    cursor: pointer;
+
+    color: var(--grey-500);
+    transition: all 1s;
+    &:hover {
+        color: var(--grey-800);
+    }
+
+    .open {
+        display: block;
+    }
+
+    .close {
+        display: none;
+    }
+
+}
