@@ -5,15 +5,10 @@
     </head>
     <body>    
         <header class="header-container">
-            <div>
-                {{- partial "header/logo.html" . -}} 
-            </div>
-            <div class="header-inner-container">
-                {{- partial "header/search.html" . -}}
-            </div>
-            <div>
-                {{- partial "header/toggle.html" . -}}
-            </div>
+            <div>{{- partial "header/logo.html" . -}}</div>
+            <div class="header-inner-container"></div>
+            <div>{{- partial "header/lang.html" . -}}</div>
+            <div>{{- partial "header/toggle.html" . -}}</div>
         </header>
         <div class="stage-container">
             <aside id="sidebar" class="sidebar">
