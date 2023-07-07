@@ -4,10 +4,10 @@
 
     cursor: pointer;
 
-    color: var(--grey-500);
+    color: var(--baseof-icon-color);
     transition: all 1s;
     &:hover {
-        color: var(--grey-800);
+        color: var(--baseof-icon-color-hover);
     }
 
     .open {

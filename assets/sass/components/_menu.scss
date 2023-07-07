@@ -1,0 +1,56 @@
+.menu {
+    margin-top: 1rem;
+    .menu-item {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        .item-link {
+            flex: 1;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+
+            text-decoration: none;
+
+            color: var(--baseof-icon-color);
+            transition: all 1s;
+            &:hover {
+                color: var(--primary);
+            }
+
+            .item-pre {
+                height: $header-height;
+                width: $header-height;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 1.25rem;
+            }
+    
+            .item-name {
+                flex: 1;
+    
+            }
+        }
+
+        .active {
+            color: var(--primary);
+        }
+
+        .item-toggle {
+
+            margin: 0 1rem;
+            padding: .5rem;
+            cursor: pointer;
+
+            color: var(--baseof-text-color);
+            transition: all 1s;
+            &:hover {
+                color: var(--baseof-icon-color-hover);
+            }
+
+        }
+
+    }
+}

@@ -13,7 +13,23 @@
 }
 
 :root[theme="default"] {
-    --body-background-color:var(--white);
+
+    --primary:#59832c;
+    --secondary: #fbb929;
+    
+    --baseof-background-color:var(--white);
+    --baseof-icon-color:var(--grey-500);
+    --baseof-icon-color-hover:var(--grey-700);
+    --baseof-icon-color-active:var(--grey-700);
+    --baseof-text-color:var(--grey-600);
+    --baseof-text-color-hover:var(--grey-800);
+    --baseof-text-color-active:var(--grey-800);
+    --baseof-border-color:var(--grey-300);
+
+    --stage-background-color:var(--grey-100);
+
+    --logo-text-color:var(--primary);
+
 }
 
 :root[theme="other"] {}

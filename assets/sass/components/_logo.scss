@@ -1,17 +1,32 @@
 .logo {
     display: flex;
-    
-    img {
-        display: block;
-        width: 2rem;
-        height: 2rem;
+    flex-direction: row;
+    align-items: center;
 
-        margin: 0 .125rem 0 .5rem;
+    .img-container {
+        width: $header-height;
+        height: $header-height;
+
+        padding: 14px;
+
+        display: none;
+
+
+        img {
+            display: block;
+            width: 32px;
+            height: 32px;
+
+        }
     }
+    
+
 
     span {
         font-size: 1.25rem;
-        margin: 0 .5rem 0 .125rem;
+        font-weight: bold;        
+        color: var(--logo-text-color);
+        margin: 0 1rem;
 
     }
 

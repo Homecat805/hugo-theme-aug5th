@@ -1,0 +1,94 @@
+<ul class="menu">
+{{ $current := . }}
+{{ range .Site.Menus.main }}
+
+
+    {{ if .HasChildren }}
+
+        <li>
+            <div class="menu-item ">
+                <a class="item-link" href="{{ .URL }}">
+                    <span class="item-pre">{{ .Pre }}</span>
+                    <span class="item-name">{{ .Name }}</span>
+                </a>
+
+                <span class="item-toggle"><i class="bi bi-chevron-compact-down"></i></span>
+            </div>
+            <ul>
+            {{ range .Children }}
+                <li class="menu-item ">
+                    <a class="item-link" href="{{ .URL }}">{{ .Name }}</a>
+                </li>
+            {{ end }}
+            </ul>      
+        </li>
+
+    {{ else }}
+
+        <li>
+            <div class="menu-item">
+                <a class="item-link" href="{{ .URL }}">
+                    <span class="item-pre">{{ .Pre }}</span>
+                    <span class="item-name">{{ .Name }}</span>
+                </a>
+            </div>
+        </li>
+        
+    {{ end }}
+
+
+
+
+
+
+{{ end }}
+</ul>
+
+
+<!-- 
+    <ul class="menu">
+    {{ $current := . }}
+    {{ range .Site.Menus.main }}
+    
+        {{ $active := eq .Name $current.Title }}
+        {{ $active = or $active ( eq .Identifier $current.Section ) }}
+    
+    
+        {{ if .HasChildren }}
+            <li class="menu-item {{ if $active }} active {{ end }} nested">
+                <a class="menu-link">
+                    <i class="{{ .Pre }} menu-icon"></i>
+                    <span class="menu-title">{{ .Name }}</span>
+                    <i class="bi bi-chevron-compact-down menu-icon"></i>
+                </a>
+                <ul class="sub-menu {{ if $active }} sub-menu-show {{ end }}">
+                {{ range .Children }}
+                
+                    {{ $subactive := eq .Name $current.Title }}
+                    {{ $subactive = or $subactive ( eq .Identifier $current.File.Dir ) }}
+    
+                    <li class="sub-menu-item ">
+                        <a class="menu-link {{ if $subactive }} subactive {{ end }}" href="{{ .URL }}">
+                            <i class="bi bi-dot menu-icon"></i>
+                            <span class="menu-title">{{ .Name }}</span>
+                        </a>
+                    </li>
+                {{ end }}
+                </ul>
+            </li>
+        {{ else }}
+            <li class="menu-item {{ if $active }} active {{ end }}">
+                <a class="menu-link" href="{{ .URL }}">
+                    <i class="{{ .Pre }} menu-icon"></i>
+                    <span class="menu-title">{{ .Name }}</span>
+                </a>
+            </li>
+        {{ end }}
+    
+    
+    {{ end }}
+    </ul>
+    
+     -->
+    
+    
