@@ -1,15 +1,16 @@
-.header-container {
-
-    width: 100%;
-    height: $header-height;
-    background-color: var(--baseof-background-color);
+#header {
 
     position: fixed;
     top: 0;
     left: 0;
     z-index: 100;
 
+    width: 100%;
+    height: $header-height;
+    background-color: var(--baseof-background-color);
+
     display: flex;
+    flex-direction: row;
     align-items: center;
     justify-content: space-between;
 
@@ -23,77 +24,80 @@
 
 .stage-container {
 
+    position: absolute;
+
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-height: 100vh;
+
+}
+
+#sidebar {
+
+    position: absolute;
+    top: 0;
+    left: -250px;
+    index: 10;
+
+    width: 250px;
     height: 100vh;
     padding-top: $header-height;
-    background-color: var(--grey-200);
 
-    .sidebar {
+    background-color: var(--baseof-background-color);
+    border-right: 1px solid var(--baseof-border-color);
 
-        width: 250px;
-        height: 100%;
-        background-color: var(--baseof-background-color);
+    
+}
 
-        border-right: 1px solid var(--baseof-border-color);
+#stage {
 
-        position: absolute;
-        top: 0;
-        left: -250px;
-        z-index: 50;
+    flex: 1;
+
+    padding-top: $header-height;
+
+    width: 100%;
+    min-height: 100%;
+
+    display: flex;
+    flex-direction: column;
+
+    background-color: var(--stage-background-color);
+
+    .stage-center {
+        flex: 1;
     }
-
-    .stage {
-        height: 100%;
-        
-        display: flex;
-        flex-direction: column;
-
-        background-color: var(--stage-background-color);
-
-        .stage-center {
-            flex: 1;
-        }
-    }
-
 }
 
-#w-screen {
-    display: none;
+#w-screen { display: none; }
 
-}
+#n-screen { display: block; }
 
-#n-screen {
-    display: block;
-}
+
 
 @media screen and (min-width: $md) {
+    
     .stage-container {
 
-        display: flex;
-
-        .sidebar {
-
-            width: 250px;
-  
-            position: static;
-            top: 0;
-            left: 0;
-            z-index: 0;
-        }
-    
-        .stage {
-            flex: 1;
-        }
-    
-    }
-
-    #w-screen {
-        display: block;
-    
+        flex-direction: row;
+   
     }
     
-    #n-screen {
-        display: none;
+    #sidebar {
+    
+        position: static;
+        width: 250px;
+       
+    }
+    
+    #stage {
+    
+        flex: 1;
 
     }
+
+    #w-screen { display: block; }
+
+    #n-screen { display: none; }
 
 }

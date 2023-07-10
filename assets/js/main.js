@@ -13,6 +13,7 @@ $(document).ready(function(){
     const menuItemName = $('.menu').find('.item-name');
     const menuItemToggle = $('.menu').find('.item-toggle');
 
+
     nOpenBtn.click(function(){
         sidebar.animate({left:'0'});
         nCloseBtn.show();
@@ -27,10 +28,12 @@ $(document).ready(function(){
 
     wOpenBtn.click(function(){
         sidebar.animate({width:'60px'});
+
         wCloseBtn.show();
         wOpenBtn.hide();
         menuItemName.hide(250);
         menuItemToggle.hide(250);
+
     });
 
     wCloseBtn.click(function(){

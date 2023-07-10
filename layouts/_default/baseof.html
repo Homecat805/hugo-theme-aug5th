@@ -3,18 +3,23 @@
     <head>
         {{- partial "baseof/head.html" . -}} 
     </head>
-    <body>    
-        <header class="header-container">
+    <body>
+
+        <header id="header">
             <div>{{- partial "header/logo.html" . -}}</div>
             <div class="header-inner-container"></div>
             <div>{{- partial "header/lang.html" . -}}</div>
             <div>{{- partial "header/toggle.html" . -}}</div>
         </header>
+
         <div class="stage-container">
-            <aside id="sidebar" class="sidebar">
-                {{- partial "stage/menu.html" . -}}
+
+            <aside id="sidebar">
+
+
             </aside>
-            <main class="stage">
+            
+            <main id="stage">
                 <div class="stage-header"></div>
                 <div class="stage-center">
                     {{- block "stage" . }}{{- end }}
@@ -23,7 +28,10 @@
                     {{- partial "stage/footer.html" . -}}
                 </div>
             </main>
+
         </div>
+
+
         <!-- Javascripts -->
         {{- partial "baseof/foot.html" . -}} 
     </body>
