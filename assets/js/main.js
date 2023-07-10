@@ -48,4 +48,17 @@ $(document).ready(function(){
         menuItemToggle.show();
     });
 
+    // Menu
+
+
+  
+    menuItemToggle.click(function(){
+
+        $(this).parents('.menu-item').siblings().children('.sub-menu').slideUp();
+
+        $(this).parents('.menu-item').find('.sub-menu').slideToggle();
+        
+    });
+
+
 });

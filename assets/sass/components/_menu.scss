@@ -2,7 +2,9 @@
 
 
     top: 1rem;
-    width: 270px;
+    
+    width: 250px;
+
 
     .menu-item {
         min-height: 60px;
@@ -45,34 +47,36 @@
                 }
             }
 
-        }
+            .active {
+                color: var(--primary);
+            }
 
+            .item-toggle {
 
-        .active {
-            color: var(--primary);
-        }
-
-        .item-toggle {
-
-            margin: 0 1rem;
-            padding: .5rem;
-            cursor: pointer;
-
-            color: var(--baseof-text-color);
-            transition: all 1s;
-            &:hover {
-                color: var(--baseof-icon-color-hover);
+                margin: 0 1rem;
+                padding: .5rem;
+                cursor: pointer;
+    
+                color: var(--baseof-text-color);
+                transition: all 1s;
+                &:hover {
+                    color: var(--baseof-icon-color-hover);
+                }
+    
             }
 
         }
 
+
+
+
+
+
         .sub-menu {
             margin-left: 60px;
+            display: none;
 
             .sub-menu-item {
-
-
-
                 list-style: none;
             }
 
