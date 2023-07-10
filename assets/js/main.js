@@ -1,6 +1,6 @@
 $(window).resize(function(){
     location.reload();
-}
+});
 
 $(document).ready(function(){
 
@@ -49,5 +49,3 @@ $(document).ready(function(){
     });
 
 });
-
-
