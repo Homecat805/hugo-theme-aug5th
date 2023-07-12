@@ -1,0 +1,24 @@
+<ul class="menu">
+{{ $current := . }}
+{{ range .Site.Menus.main }}
+
+    {{ $active := eq .Name $current.Title }}
+    {{ $active = or $active ( eq .Identifier $current.Section ) }}
+
+        <li class="menu-item">
+            <a class="item-link {{ if $active }} active {{ end }}" href="{{ .URL }}">
+                <span class="item-pre">{{ .Pre }}</span>
+                <span class="item-name">{{ .Name }}</span>
+            </a>
+        </li>
+
+{{ end }}
+</ul>
+    
+
+
+
+
+
+
+

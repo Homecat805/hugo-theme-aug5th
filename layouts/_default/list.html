@@ -1,6 +1,21 @@
 {{ define "stage" }}
 
-<h1>List</h1>
+<div class="stage-center-container">
+  <h1>{{ .Title }}</h1>
+
+
+  <ul>
+    {{ range .Pages }}
+      <li>
+        <a href="{{ .Permalink }}">{{ .Date.Format "2006-01-02" }} | {{ .Title }}</a>
+      </li>
+    {{ end }}
+  </ul>
+</div>
+
+
+
+
 
 
 {{ end }}

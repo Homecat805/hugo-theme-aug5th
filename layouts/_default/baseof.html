@@ -4,33 +4,31 @@
         {{- partial "baseof/head.html" . -}} 
     </head>
     <body>
-
-        <header id="header">
-            <div>{{- partial "header/logo.html" . -}}</div>
-            <div class="header-inner-container"></div>
-            <div>{{- partial "header/lang.html" . -}}</div>
-            <div>{{- partial "header/toggle.html" . -}}</div>
-        </header>
-
-        <div class="stage-container">
-
-            <aside id="sidebar">
-                {{- partial "stage/scrollbar-invisible.html" . -}}
-            </aside>
-            
-            <main id="stage">
-                <div class="stage-header"></div>
+        <div class="base-container">
+            <div id="sider">
+                <div class="sider-inner-container">
+                    <div class="sider-inner-content-container">
+                        {{- partial "sider/title.html" . -}}
+                        {{- partial "sider/menu.html" . -}}
+                    </div>
+                </div>
+            </div>
+            <div id="stager">
+                <header class="stage-header">
+                    {{- partial "stager/logo.html" . -}}
+                    <div class="container-flex-1"></div>
+                    {{- partial "stager/toggle.html" . -}}
+                </header>
                 <div class="stage-center">
-                    {{- block "stage" . }}{{- end }}
+                    <div class="stage-center-inner-container">
+                        {{- block "stage" . }}{{- end }}
+                    </div>
                 </div>
-                <div class="stage-foot">
-                    {{- partial "stage/footer.html" . -}}
-                </div>
-            </main>
-
+                <foot class="stage-foot">
+                    {{- partial "stager/footer.html" . -}}
+                </foot>
+            </div>
         </div>
-
-
         <!-- Javascripts -->
         {{- partial "baseof/foot.html" . -}} 
     </body>
