@@ -19,10 +19,11 @@
                     <div class="container-flex-1"></div>
                     {{- partial "stager/toggle.html" . -}}
                 </header>
+                <div class="stage-necker">
+                    {{- block "stage-necker" . }}{{- end }}
+                </div>
                 <div class="stage-center">
-                    <div class="stage-center-inner-container">
-                        {{- block "stage" . }}{{- end }}
-                    </div>
+                    {{- block "stage-center" . }}{{- end }}
                 </div>
                 <foot class="stage-foot">
                     {{- partial "stager/footer.html" . -}}

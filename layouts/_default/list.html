@@ -1,21 +1,14 @@
-{{ define "stage" }}
+{{ define "stage-necker" }}
+    {{- partial "stager/breadcrumb.html" . -}}
+{{ end }}
 
-<div class="stage-center-container">
-  <h1>{{ .Title }}</h1>
+{{ define "stage-center" }}
 
+    <main>
+        {{- partial "stager/items.html" . -}}
+    </main>
+    <aside>
 
-  <ul>
-    {{ range .Pages }}
-      <li>
-        <a href="{{ .Permalink }}">{{ .Date.Format "2006-01-02" }} | {{ .Title }}</a>
-      </li>
-    {{ end }}
-  </ul>
-</div>
-
-
-
-
-
+    </aside>
 
 {{ end }}

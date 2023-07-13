@@ -39,7 +39,7 @@
 #stager {
     flex: 1;
     min-height: 100vh;
-    background-color: var(--stage-background-color);
+    background-color: var(--baseof-background-color);
 
     display: flex;
     flex-direction: column;
@@ -59,15 +59,25 @@
 
     .stage-center {
         flex: 1;
-        .stage-center-inner-container {
-            padding: 3rem;
+
+
+        display: flex;
+        flex-direction: column;
+
+        main {
+            margin-bottom: 1.5rem;
+
         }
+        aside {
+            margin-bottom: 1.5rem;
+
+        }
+
     }
 
     .stager-footer {
 
     }
-
    
 }
 
@@ -93,6 +103,25 @@
 
         .stage-header {
             display: none;
+        }
+
+        .stage-center {
+            flex: 1;
+    
+            padding: 1.5rem;
+    
+            display: flex;
+            flex-direction: column;
+    
+            main {
+                margin-bottom: 1.5rem;
+    
+            }
+            aside {
+                margin-bottom: 1.5rem;
+    
+            }
+    
         }
         
     }

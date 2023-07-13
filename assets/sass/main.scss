@@ -4,11 +4,14 @@
 
 @import "layouts/baseof";
 
-@import "components/logo";
-@import "components/toggle";
-@import "components/copyright";
-@import "components/title";
-@import "components/menu";
+@import "components/stager/logo";
+@import "components/stager/toggle";
+@import "components/stager/copyright";
+@import "components/stager/breadcrumb";
+@import "components/stager/items";
+
+@import "components/sider/title";
+@import "components/sider/menu";
 
 
 
