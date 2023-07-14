@@ -14,10 +14,12 @@
 
 :root[theme="default"] {
 
-    --primary:#719847;
+    --primary:#016072;
+    --primary-light:#d7f0f7;
+
     --secondary: #fbf7f0;
     
-    --baseof-background-color:var(--grey-100);
+    --baseof-background-color:var(--white);
     
     --baseof-text-color:var(--grey-600);
     --baseof-text-color-hover:var(--grey-800);
@@ -26,21 +28,25 @@
 
     --stage-background-color:var(--white);
 
-
+    // Sider Colors Start
     --side-background-color: var(--white);
 
-    --logo-text-color:var(--grey-600);
-    --logo-background-color: var(--white);
+    --sidebar-title-color:var(--primary);
+    --sidebar-description-color:var(--grey-500);
 
     --menu-text-color: var(--grey-600);
     --menu-text-color-hover: var(--grey-800);
     --menu-text-color-active:var(--grey-800);
-    --menu-background-color: var(--grey-800);
-    --menu-background-color-hover: var(--grey-800);
-    --menu-background-color-active: var(--grey-800);
+    --menu-background-color: var(--grey-200);
+    --menu-background-color-hover: var(--grey-200);
+    --menu-background-color-active: var(--grey-200);
 
+    --social-text-color:var(--grey-600);
+    --social-text-color-hover:var(--grey-800);
 
+    --support-text-color:var(--grey-500);
 
+    // Sider Colors End
 
 
 }

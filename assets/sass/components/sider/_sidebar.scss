@@ -9,7 +9,7 @@
     align-items: center;
 
     .logo {
-        margin: 1rem 0 .5rem;
+        margin: 2rem 0 .5rem;
         width: 6rem;
         height: 6rem;
 
@@ -21,14 +21,14 @@
 
     .title {
         font-size: 1.5rem;
-        color: var(--grey-600);
+        color: var(--sidebar-title-color);
     }
 
     .description {
 
         font-size: .875rem;
         font-style: italic;
-        color: var(--grey-500);
+        color: var(--sidebar-description-color);
         margin: .5rem 0;
        
     }
@@ -50,12 +50,12 @@
 
                 border-radius: .375rem;
 
-                color: var(--grey-600);
+                color: var(--menu-text-color);
 
                 transition: all 1s;
 
                 &:hover {
-                    background-color: var(--grey-200);
+                    background-color: var(--menu-background-color-hover);
                 }
 
                 span {
@@ -64,7 +64,7 @@
             }
 
             .active {
-                background-color: var(--grey-200);
+                background-color: var(--menu-background-color-active);
             }
 
         }
@@ -90,7 +90,7 @@
     .support {
 
         font-size: .75rem;
-        color: var(--grey-500);
+        color: var(--support-text-color);
         margin: .75rem 0 1.5rem;
     }
 }
