@@ -4,32 +4,32 @@
         {{- partial "baseof/head.html" . -}} 
     </head>
     <body>
-        <div class="base-container">
-            <div id="sider">
-                <div class="sider-inner-container">
-                    <div class="sider-inner-content-container">
-                        {{- partial "sider/title.html" . -}}
-                        {{- partial "sider/menu.html" . -}}
-                    </div>
+
+        <div id="sider">
+            <div class="sider-inner-container">
+                <div class="sider-inner-content-container">
+                    {{- partial "sider/sidebar.html" . -}}
                 </div>
-            </div>
-            <div id="stager">
-                <header class="stage-header">
-                    {{- partial "stager/logo.html" . -}}
-                    <div class="container-flex-1"></div>
-                    {{- partial "stager/toggle.html" . -}}
-                </header>
-                <div class="stage-necker">
-                    {{- block "stage-necker" . }}{{- end }}
-                </div>
-                <div class="stage-center">
-                    {{- block "stage-center" . }}{{- end }}
-                </div>
-                <foot class="stage-foot">
-                    {{- partial "stager/footer.html" . -}}
-                </foot>
             </div>
         </div>
+        
+        <div id="stager">
+            <header class="stage-header">
+                {{- partial "stager/title.html" . -}}
+                <div class="container-flex-1"></div>
+                {{- partial "stager/toggle.html" . -}}
+            </header>
+            <div class="stage-necker">
+                {{- block "stage-necker" . }}{{- end }}
+            </div>
+            <div class="stage-center">
+                {{- block "stage-center" . }}{{- end }}
+            </div>
+            <foot class="stage-foot">
+                {{- partial "stager/footer.html" . -}}
+            </foot>
+        </div>
+
         <!-- Javascripts -->
         {{- partial "baseof/foot.html" . -}} 
     </body>

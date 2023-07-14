@@ -14,21 +14,34 @@
 
 :root[theme="default"] {
 
-    --primary:#59832c;
-    --secondary: #fbb929;
+    --primary:#719847;
+    --secondary: #fbf7f0;
     
-    --baseof-background-color:var(--white);
-    --baseof-icon-color:var(--grey-500);
-    --baseof-icon-color-hover:var(--grey-700);
-    --baseof-icon-color-active:var(--grey-700);
+    --baseof-background-color:var(--grey-100);
+    
     --baseof-text-color:var(--grey-600);
     --baseof-text-color-hover:var(--grey-800);
     --baseof-text-color-active:var(--grey-800);
     --baseof-border-color:var(--grey-300);
 
-    --stage-background-color:var(--grey-100);
+    --stage-background-color:var(--white);
 
-    --logo-text-color:var(--primary);
+
+    --side-background-color: var(--white);
+
+    --logo-text-color:var(--grey-600);
+    --logo-background-color: var(--white);
+
+    --menu-text-color: var(--grey-600);
+    --menu-text-color-hover: var(--grey-800);
+    --menu-text-color-active:var(--grey-800);
+    --menu-background-color: var(--grey-800);
+    --menu-background-color-hover: var(--grey-800);
+    --menu-background-color-active: var(--grey-800);
+
+
+
+
 
 }
 

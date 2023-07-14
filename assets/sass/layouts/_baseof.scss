@@ -1,17 +1,7 @@
-.base-container {
-    position: absolute;
-    top: 0;
-    left: 0;
-
-    width: 100%;
-
-    display: flex;
-}
-
 #sider {
     width: 250px;
     min-height: 100vh;
-    background-color: var(--baseof-background-color);
+    background-color: var(--side-background-color);
     border-right: 1px solid var(--baseof-border-color);
 
     position: absolute;
@@ -81,25 +71,20 @@
    
 }
 
-.container-flex-1 {
-    flex: 1;
 
-}
 
 @media screen and (min-width: $md) {
-    .base-container {
-
-    }
     
     #sider {
-        width: 250px;
-    
-        position: static;
-        z-index: 0;
+        position: fixed;
+        top: 0;
+        left: 0;
     
     }
     
     #stager {
+
+        margin-left: 250px;
 
         .stage-header {
             display: none;
