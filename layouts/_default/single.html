@@ -4,20 +4,11 @@
 
 {{ define "stage-center" }}
 
-
-
-<div class="stage-center-container">
-
-    <h1>{{ .Title }}</h1>
-    <div>{{ .Content }}</div>
-
-</div>
-
-
-
-
-
-
-
+    <main class="main">
+        {{- partial "stager/items.html" . -}}
+    </main>
+    <aside class="single-aside">
+        {{- partial "stager/cards.html" . -}}
+    </aside>
 
 {{ end }}

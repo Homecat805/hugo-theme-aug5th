@@ -1,15 +1,14 @@
 {{ define "stage-necker" }}
 
-
-    <h1>Index Necker</h1>
-
-
 {{ end }}
 
 {{ define "stage-center" }}
 
-
-    <h1>Index Center</h1>
-
+    <main class="main">
+        {{- partial "stager/items.html" . -}}
+    </main>
+    <aside class="list-aside">
+        {{- partial "stager/cards.html" . -}}
+    </aside>
 
 {{ end }}

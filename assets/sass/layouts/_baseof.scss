@@ -50,9 +50,23 @@
     .stage-center {
         flex: 1;
 
+        display: flex;
+        flex-direction: column;
+
+        main {
 
 
 
+        }
+
+        aside {
+
+
+
+            border-top: 1px solid var(--baseof-border-color);
+
+
+        }
     }
 
     .stager-footer {
@@ -69,25 +83,48 @@
         position: fixed;
         top: 0;
         left: 0;
-    
     }
     
     #stager {
-
         margin-left: 250px;
 
         .stage-header {
             display: none;
         }
 
-        .stage-center {
 
-    
-        }
-        
     }
 
     #sider-button {
         display: none;
     }
+}
+
+
+@media screen and (min-width: $xl) {
+    
+
+    #stager {
+
+        .stage-center {
+            display: flex;
+            flex-direction: row;
+            .main {
+                flex: 1;
+            }
+    
+            .list-aside {
+                width: 350px;
+                border-left: 1px solid var(--baseof-border-color);
+                border-top: none;
+            }
+
+            .single-aside {
+                width: 300px;
+                border-left: 1px solid var(--baseof-border-color);
+                border-top: none;
+            }
+        }
+    }
+
 }

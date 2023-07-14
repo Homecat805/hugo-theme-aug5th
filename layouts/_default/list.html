@@ -4,6 +4,11 @@
 
 {{ define "stage-center" }}
 
-
+    <main class="main">
+        {{- partial "stager/items.html" . -}}
+    </main>
+    <aside class="list-aside">
+        {{- partial "stager/cards.html" . -}}
+    </aside>
 
 {{ end }}
