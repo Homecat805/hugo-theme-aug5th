@@ -1,0 +1,28 @@
+<article>
+    <h1>{{ .Title }}</h1>
+    <p>
+        <span>{{ .Date.Format "2006-01-02" }}</span>
+        <span>{{ .Params.Author }}</span>
+    </p>
+    <div>{{ .Content }}</div>
+</article>
+
+
+{{ with .GetTerms "tags" }}
+    <ul>
+    {{ range . }}
+        <li><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></li>
+    {{ end }}
+    </ul>
+{{ end }}
+
+
+{{ with .PrevInSection }}
+<a class="previous" href="{{ .Permalink }}"> {{ .Title }}</a>
+{{ end }}
+
+{{ with .NextInSection }}
+<a class="next" href="{{ .Permalink }}"> {{ .Title }}</a>
+{{ end }}
+
+

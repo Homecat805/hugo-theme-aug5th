@@ -1,0 +1,40 @@
+<div class="cards">
+    
+    {{ with .Site.Taxonomies.categories }}
+    <section class="card-container">
+        <div class="card">
+            <div class="card-title">Categories</div>
+            <div class="card-content">
+            {{ range . }}
+                <a href="{{.Page.Permalink}}">
+                    <span>{{.Page.Title}}</span>
+                    <span class="dashed-line"></span>
+                    <span>{{.Count}}</span>
+                </a>
+            {{ end }}
+            </div>
+        </div>
+    </section>
+    {{ end }}
+
+
+
+    {{ with .Site.Taxonomies.tags }}
+
+    <section class="card-container">
+        <div class="card">
+            <div class="card-title">Tags</div>
+            <div class="card-content">
+                {{ range . }}
+                <a href="{{.Page.Permalink}}">{{.Page.Title}}({{.Count}})</a>
+                {{ end }}
+            </div>
+        </div>
+    </section>
+
+    {{ end }}
+
+
+</div>
+
+

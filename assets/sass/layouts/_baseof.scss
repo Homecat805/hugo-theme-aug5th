@@ -54,18 +54,11 @@
         flex-direction: column;
 
         main {
-
-
-
+            overflow: auto;
         }
 
         aside {
-
-
-
             border-top: 1px solid var(--baseof-border-color);
-
-
         }
     }
 

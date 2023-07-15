@@ -1,0 +1,11 @@
+<div class="items">
+    {{ range first 1 (where .Site.RegularPages "Params.headline" true) }}
+    <section class="item-container">
+        <div class="item">
+            <p class="item-title"> <a href="{{ .Permalink }}">{{ .Title }}</a></p>
+            <p class="item-summary">{{ .Summary }}</p>
+            <p>{{ .Date.Format "2006-01-02" }}</p>
+        </div>
+    </section>
+    {{ end }}
+</div>

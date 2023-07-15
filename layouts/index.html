@@ -5,10 +5,12 @@
 {{ define "stage-center" }}
 
     <main class="main">
-        {{- partial "stager/items.html" . -}}
+        {{- partial "stager/topone" . -}}
+        {{- partial "stager/headline" . -}}
     </main>
+
     <aside class="list-aside">
-        {{- partial "stager/cards.html" . -}}
+        {{- partial "stager/cards-home.html" . -}}
     </aside>
 
 {{ end }}
