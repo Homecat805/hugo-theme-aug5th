@@ -1,32 +1,42 @@
 .cards {
     position: sticky;
     top: 0;
+
     padding: .5rem;
 
+
+
     .card-container {
-        padding: .5em;
+        margin-top: 1rem;
 
         .card {
+            position: relative;
+            border-top: 1px solid var(--baseof-border-color);
+            padding-top: .5rem;
 
             a {
                 font-size: .875rem;
                 text-decoration: none;
-                color: var(--grey-600);
-                background-color: var(--white);
-                transition: all 1s;
+                color: var(--card-text-color);
+                background-color: var(--card-background-color);
+                transition: all .5s;
                 &:hover {
 
-                    color: var(--grey-100);
-                    background-color: var(--grey-600);
+                    color: var(--card-text-color-hover);
+                    background-color: var(--card-background-color-hover);
 
                 }
             }
 
             .card-title {
-                text-align: right;
-                border-bottom: 1px solid var(--baseof-border-color);
-                height: 2.25rem;
-                padding: .25rem 1rem;
+
+                position: absolute;
+                top: -1rem;
+                right: .75rem;
+
+                background-color: var(--baseof-background-color);
+                color: var(--baseof-text-color);
+                padding: 0 .5rem;
 
             }
 
@@ -41,12 +51,13 @@
                     justify-content: space-between;
 
                     padding: .25rem .5rem;
-                    margin: .25rem 0;
+                    margin: .125rem 0;
+
 
                     text-decoration: none;
 
                     border-radius: .375rem;
-                    border: 1px solid var(--baseof-border-color);
+
 
 
                     .dashed-line {
@@ -67,13 +78,12 @@
                 .capsule {
 
                     text-decoration: none;
-                    border: 1px solid var(--baseof-border-color);
                     border-radius: .375rem;
 
 
                     display: block;
                     padding: .25rem .5rem;
-                    margin: .25rem .5rem .25rem 0;
+                    margin: 1px 8px 1px 0;
 
                 }
             }
@@ -84,14 +94,13 @@
                 .normal {
 
                     text-decoration: none;
-                    border: 1px solid var(--baseof-border-color);
                     border-radius: .375rem;
                     font-size: .875rem;
 
                     display: flex;
                     justify-content: stretch;
                     padding: .25rem .5rem;
-                    margin: .25rem 0;
+                    margin: .125rem 0;
 
                     i {
                         margin-right: .5rem;
@@ -104,7 +113,7 @@
 
             .tag-content {
 
-
+                padding: .5rem 0;
 
 
                 ul {
@@ -113,6 +122,7 @@
                     padding: 0;
                     li {
                         line-height: 1.5rem;
+                        padding: 0 .5rem;
                         &::before {
                             content: "\2022";
                             font-weight: bold;
@@ -120,8 +130,7 @@
                             width: 1rem;
                             margin-left: -1rem;
 
-                            padding: .25rem .5rem;
-                            margin: .25rem .5rem .25rem 0;
+
                         }
                     }
                 }

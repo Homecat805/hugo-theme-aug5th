@@ -1,12 +1,12 @@
 #sider {
-    width: 250px;
+    width: $side-width;
     min-height: 100vh;
     background-color: var(--side-background-color);
     border-right: 1px solid var(--baseof-border-color);
 
     position: absolute;
     top: 0;
-    left: -250px;
+    left: $side-original-position;
     z-index: 100;
 
     overflow: hidden;
@@ -18,7 +18,7 @@
         overflow-x: hidden;
 
         .sider-inner-content-container {
-            width: 250px;
+            width: $side-width;
             height: 100%;
 
         }
@@ -79,7 +79,7 @@
     }
     
     #stager {
-        margin-left: 250px;
+        margin-left: $side-width;
 
         .stage-header {
             display: none;

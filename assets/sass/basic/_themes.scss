@@ -14,10 +14,9 @@
 
 :root[theme="default"] {
 
-    --primary:#016072;
-    --primary-light:#d7f0f7;
+    --primary:#006a57;
 
-    --secondary: #fbf7f0;
+    --secondary: #ffb400;
     
     --baseof-background-color:var(--white);
     
@@ -48,7 +47,12 @@
 
     // Sider Colors End
 
-
+    // Cards Colors Start
+    --card-text-color:var(--primary);
+    --card-text-color-hover:var(--white);
+    --card-background-color:var(--white);
+    --card-background-color-hover:var(--secondary);
+    // Cards Colors End
 }
 
 :root[theme="other"] {}
