@@ -3,8 +3,8 @@
     {{ with .TableOfContents }}
     <section class="card-container">
         <div class="card">
-            <div class="card-title">Table of Content</div>
-            <div class="card-content">
+            <div class="card-title">TABLE OF CONTENT</div>
+            <div class="tag-content">
                 {{ . }}
             </div>
         </div>
@@ -19,13 +19,14 @@
 
     <section class="card-container">
         <div class="card">
-            <div class="card-title">Related</div>
-            <div class="card-content">
-                <ul>
-                    {{ range . }}
-                    <li><a href="{{.Permalink}}">{{.Title}}</a></li>
-                    {{ end }}
-                </ul>
+            <div class="card-title">RELATED</div>
+            <div class="normal-content">
+                {{ range . }}
+                <a class="normal" href="{{.Permalink}}">
+                    <span><i class="bi bi-link-45deg"></i></span>
+                    <span>{{.Title}}</span>
+                </a>
+                {{ end }}
             </div>
         </div>
     </section>

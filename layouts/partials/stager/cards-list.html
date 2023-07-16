@@ -3,10 +3,10 @@
     {{ with .Site.Taxonomies.categories }}
     <section class="card-container">
         <div class="card">
-            <div class="card-title">Categories</div>
-            <div class="card-content">
+            <div class="card-title">CATAGORY</div>
+            <div class="dumbbell-content">
             {{ range . }}
-                <a href="{{.Page.Permalink}}">
+                <a class="dumbbell" href="{{.Page.Permalink}}">
                     <span>{{.Page.Title}}</span>
                     <span class="dashed-line"></span>
                     <span>{{.Count}}</span>
@@ -23,10 +23,13 @@
 
     <section class="card-container">
         <div class="card">
-            <div class="card-title">Tags</div>
-            <div class="card-content">
+            <div class="card-title">TAG</div>
+            <div class="capsule-content">
                 {{ range . }}
-                <a href="{{.Page.Permalink}}">{{.Page.Title}}({{.Count}})</a>
+                <a class="capsule" href="{{.Page.Permalink}}">
+                    <span>{{.Page.Title}}</span>
+                    <span>{{.Count}}</span>
+                </a>
                 {{ end }}
             </div>
         </div>
