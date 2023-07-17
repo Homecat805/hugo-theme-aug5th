@@ -3,7 +3,9 @@
     {{ with .TableOfContents }}
     <section class="card-container">
         <div class="card">
-            <div class="card-title">TABLE OF CONTENT</div>
+            <div class="card-title">
+                <p>CONTENT</p>
+            </div>
             <div class="tag-content">
                 {{ . }}
             </div>
@@ -19,7 +21,9 @@
 
     <section class="card-container">
         <div class="card">
-            <div class="card-title">RELATED</div>
+            <div class="card-title">
+                <p>RELATED</p>
+            </div>
             <div class="normal-content">
                 {{ range . }}
                 <a class="normal" href="{{.Permalink}}">

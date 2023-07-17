@@ -1,11 +1,19 @@
+
 <div class="items">
     {{ range after 1 (first 5 (where .Site.RegularPages "Params.headline" true)) }}
     <section class="item-container">
         <div class="item">
             <p class="item-title"> <a href="{{ .Permalink }}">{{ .Title }}</a></p>
-            <p class="item-summary">{{ .Summary }}</p>
-            <p>{{ .Date.Format "2006-01-02" }}</p>
+            {{ .Summary }}
+            <p class="item-meta">
+                <span><i class="bi bi-calendar-date-fill"></i></span>
+                <span>{{ .Date.Format "2006-01-02" }}</span>
+                <span><i class="bi bi-person-fill"></i></span>
+                <span>{{ .Site.Author.name }}</span>
+            </p>
+    
         </div>
     </section>
+
     {{ end }}
 </div>

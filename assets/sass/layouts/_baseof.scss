@@ -55,9 +55,13 @@
 
         main {
             overflow: auto;
+
         }
 
         aside {
+
+            margin: 1.5rem;
+
 
         }
     }
@@ -105,14 +109,21 @@
             .main {
                 flex: 1;
             }
+
+            aside {
+                margin: 0;
+                border-left: 1px solid var(--baseof-border-color);
+            }
     
             .list-aside {
                 width: 350px;
 
+
+
             }
 
             .single-aside {
-                width: 300px;
+                width: 250px;
 
             }
         }

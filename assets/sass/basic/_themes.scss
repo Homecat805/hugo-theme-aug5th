@@ -20,7 +20,7 @@
     
     --baseof-background-color:var(--white);
     
-    --baseof-text-color:var(--grey-600);
+    --baseof-text-color:var(--grey-800);
     --baseof-text-color-hover:var(--grey-800);
     --baseof-text-color-active:var(--grey-800);
     --baseof-border-color:var(--grey-300);
@@ -48,11 +48,19 @@
     // Sider Colors End
 
     // Cards Colors Start
+    --card-title-color:var(--grey-300);
     --card-text-color:var(--primary);
     --card-text-color-hover:var(--white);
     --card-background-color:var(--white);
     --card-background-color-hover:var(--secondary);
     // Cards Colors End
+
+    // Items Colors Start
+    --item-title-color:var(--primary);
+    --item-title-color-hover:var(--secondary);
+    --item-summary-color:var(--grey-600);
+    --item-meta-color:var(--grey-500);
+    // Items Colors End
 }
 
 :root[theme="other"] {}

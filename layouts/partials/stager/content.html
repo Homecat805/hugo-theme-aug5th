@@ -1,28 +1,42 @@
-<article>
-    <h1>{{ .Title }}</h1>
-    <p>
-        <span>{{ .Date.Format "2006-01-02" }}</span>
-        <span>{{ .Params.Author }}</span>
-    </p>
-    <div>{{ .Content }}</div>
-</article>
+<div class="content-container">
 
+    <article class="content">
+        <p class="content-title">{{ .Title }}</p>
+        <p class="content-meta">
+            <span>{{ .Date.Format "2006-01-02" }}</span>
+            {{ with .Params.Author }}
+                <span>{{ . }}</span>
+            {{ else }}
+                <span>{{ .Site.Author.name }}</span>
+            {{ end }}
+        </p>
+        <div class="markdown">{{ .Content }}</div>
+    </article>
 
-{{ with .GetTerms "tags" }}
+    {{ with .GetTerms "tags" }}
     <ul>
-    {{ range . }}
+        {{ range . }}
         <li><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></li>
-    {{ end }}
+        {{ end }}
     </ul>
-{{ end }}
+    {{ end }}
+
+    {{ with .PrevInSection }}
+    <a class="previous" href="{{ .Permalink }}"> {{ .Title }}</a>
+    {{ end }}
+
+    {{ with .NextInSection }}
+    <a class="next" href="{{ .Permalink }}"> {{ .Title }}</a>
+    {{ end }}
+
+</div>
 
 
-{{ with .PrevInSection }}
-<a class="previous" href="{{ .Permalink }}"> {{ .Title }}</a>
-{{ end }}
 
-{{ with .NextInSection }}
-<a class="next" href="{{ .Permalink }}"> {{ .Title }}</a>
-{{ end }}
+
+
+
+
+
 
 

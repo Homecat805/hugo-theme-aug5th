@@ -1,0 +1,33 @@
+.content-container {
+    margin: 1rem;
+
+    .content {
+        color: var(--baseof-text-color);
+
+        .content-title {
+            margin: 4rem 0 1rem;
+            text-align: center;
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--baseof-text-color);
+        }
+        .content-meta {
+            text-align: center;
+            font-size: .875rem;
+            margin-bottom: 2rem;
+            span {
+                margin: 0 .25rem;
+            }
+        }
+    }
+
+}
+
+
+@media screen and (min-width: $md) {
+    .content-container {
+        margin: 1.5rem;
+
+    }
+    
+}

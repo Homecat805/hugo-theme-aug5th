@@ -3,7 +3,9 @@
     {{ with .Site.Taxonomies.categories }}
     <section class="card-container">
         <div class="card">
-            <div class="card-title">CATAGORY</div>
+            <div class="card-title">
+                <p>CATAGORY</p>
+            </div>
             <div class="dumbbell-content">
             {{ range . }}
                 <a class="dumbbell" href="{{.Page.Permalink}}">
@@ -23,7 +25,9 @@
 
     <section class="card-container">
         <div class="card">
-            <div class="card-title">TAG</div>
+            <div class="card-title">
+                <p>TAG</p>
+            </div>
             <div class="capsule-content">
                 {{ range . }}
                 <a class="capsule" href="{{.Page.Permalink}}">
