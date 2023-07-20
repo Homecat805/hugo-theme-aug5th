@@ -7,21 +7,15 @@
 
     margin: 0 auto;
     
-
-
-
     .item-container {
         width: 100%;
         margin-bottom: 1.75rem;
 
-
         .item {
-
-
 
             p {
                 font-size: 1rem;
-                color: var(--baseof-text-color);
+                color: var(--item-summary-color);
                 line-height: 1.25rem;
 
                 span {
@@ -39,7 +33,7 @@
 
                 a {
                     text-decoration: none;
-                    color: var(--baseof-text-color);
+                    color: var(--item-title-color);
                     font-weight: 600;
                     transition: all .5s;
                     &:hover {
@@ -48,33 +42,26 @@
                 }
             }
 
-
-
             .item-meta {
                 font-size: .875rem;
-                color: var(--baseof-text-color);
+                color: var(--item-meta-color);
                 margin-top: .375rem;
             }
         }
 
     }
 
-
 }
 
 @media screen and (min-width: $xxl) {
-    .items {
 
-    
-    
+    .items {
     
         .item-container {
             width: 50%;
 
-
             &:nth-child(odd) {
                 padding-right: .75rem;
-
             }
 
             &:nth-child(even) {
@@ -82,15 +69,9 @@
 
             }
 
-
-    
-
-    
         }
     
-    
     }
-    
 
 }
 

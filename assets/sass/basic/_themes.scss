@@ -17,33 +17,37 @@
     --primary:#006a57;
     --secondary: #ffb400;
 
+    // Baseof Colors
     --baseof-text-color:var(--grey-600);
-    --baseof-text-color-dark:var(--grey-800);
-    --baseof-text-color-light:var(--grey-400);
+    --baseof-text-color-dark:var(--grey-700);
+    --baseof-text-color-light:var(--grey-500);
     --baseof-background-color:var(--white);
     --baseof-border-color:var(--grey-300);
     --baseof-title-color:var(--primary);
 
+    // Menu Colors
     --menu-text-color:var(--grey-600);
     --menu-text-color-hover:var(--grey-800);
+    --menu-text-color-active:var(--white);
     --menu-background-color:var(--grey-100);
-    --menu-background-color-hover:var(--grey-200);
+    --menu-background-color-hover:var(--secondary);
+    --menu-background-color-active:var(--secondary);
 
-    // Cards Colors Start
-    --card-title-color:var(--grey-300);
+    // Cards Colors
+    --card-title-color:var(--grey-500);
     --card-text-color:var(--primary);
     --card-text-color-hover:var(--white);
     --card-background-color:var(--white);
     --card-background-color-hover:var(--secondary);
-    // Cards Colors End
 
-    // Items Colors Start
-    --item-title-color:var(--primary);
+    // Items Colors
+    --item-title-color:var(--grey-800);
     --item-title-color-hover:var(--secondary);
-    --item-summary-color:var(--grey-600);
-    --item-meta-color:var(--grey-500);
-    // Items Colors End
+    --item-summary-color:var(--grey-700);
+    --item-meta-color:var(--grey-600);
 
 }
 
-:root[theme="other"] {}
+:root[theme="other"] {
+
+}

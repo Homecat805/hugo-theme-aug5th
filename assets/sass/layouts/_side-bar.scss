@@ -12,11 +12,6 @@
         margin: 2rem 0 .5rem;
         width: 6rem;
         height: 6rem;
-
-        img {
-            width: 100%;
-            max-width: 100%;
-        }
     }
 
     .title {
@@ -30,10 +25,13 @@
         font-style: italic;
         color: var(--baseof-text-color);
         margin: .5rem 0;
-       
+
+        text-align: center;
+           
     }
 
     .menu {
+
         margin: 1rem 0;
         width: 85%;
         font-size: 1rem;
@@ -41,7 +39,6 @@
         .menu-item {
             list-style: none;
             margin: .5rem 0;
-
 
             .item-link {
                 display: block;
@@ -56,20 +53,22 @@
                 transition: all 1s;
 
                 &:hover {
+                    color: var(--menu-text-color-hover);
                     background-color: var(--menu-background-color-hover);
                 }
 
                 span {
                     margin-right: .5rem;
                 }
+
             }
 
             .active {
-                background-color: var(--menu-background-color-hover);
+                color: var(--menu-text-color-active);
+                background-color: var(--menu-background-color-active);
             }
 
         }
-
 
     }
 
@@ -78,17 +77,23 @@
     }
 
     .rss {
+
         font-size: 1.25rem;
+
         span {
             margin: 0 .25rem;
         }
+
         a {
             color: var(--baseof-text-color);
             transition: all 1s;
+
             &:hover {
-                color: var(--baseof-text-color-dark);
+                color: var(--baseof-text-color);
             }
+
         }
+
     }
 
 
@@ -97,5 +102,7 @@
         font-size: .75rem;
         color: var(--baseof-text-color);
         margin: .75rem 0 1.5rem;
+
     }
+    
 }

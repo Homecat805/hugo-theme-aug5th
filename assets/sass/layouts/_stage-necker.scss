@@ -1,9 +1,10 @@
 .stage-necker {
+
+
    border-bottom: 1px solid var(--baseof-border-color);
 
    .breadcrumb {
-      list-style: none;
-  
+
       background-color: var(--baseof-background-color);
       color: var(--baseof-text-color);
   
@@ -23,11 +24,11 @@
 
 }
 
-
- @media (min-width: $md) {
-   .stage-header {
+@media (min-width: $xl) {
+   .stage-necker {
       .breadcrumb {
-         padding: .75rem 1.5rem;
+         padding: 0.75rem 1.5rem;
       }
    }
 }
+

@@ -1,33 +1,72 @@
 .markdown {
 
-    color: var(--grey-700);
+    color: var(--baseof-text-color-dark);
 
-    // 标题和段落
+    // 标题
     h2 { 
-        margin-top: 2rem; 
-        font-size: 1.25rem;
+        margin-top: 2.5rem; 
+
+        font-size: 1.5rem;
+        font-weight: 500;
     }
+
     h3 { 
-        margin-top: 1.5rem; 
-        font-size: 1rem;
+        margin-top: 1.75rem; 
+
+        font-size: 1.25rem;
+        font-weight: 500;
     }
     h4 { 
-        margin-top: 1rem; 
+        margin-top: 1.5rem; 
+
+        font-size: 1rem;
+        font-weight: 500;
+    }
+
+    h5, h6 { 
+        margin-top: 1.5rem;
+
         font-size: .875rem;
+        font-weight: 500;
     }
-    h5 { 
-        margin-top: 1rem; 
-        font-size: .75rem;
-    }
-    h6 { 
-        margin-top: 1rem; 
-        font-size: .75rem;
-    }
+
+    // 段落
+
     p {
         margin-top: 1rem;
         line-height: 1.75rem;
-        text-align: justify;
     }
+
+
+
+    // 短代码
+    code {
+        font-family: $monospace;
+        background-color: var(--grey-100);
+        padding: .125rem .375rem;
+    }
+
+    // 格式化文本 或 长代码
+    pre {
+
+        background-color: var(--grey-100);
+        overflow-y: hidden;
+        overflow-x: auto;
+
+
+
+        code {
+            color: var(--grey-100);
+            background-color: var(--grey-700);
+            padding: 0;
+        }
+
+    }
+
+
+
+
+
 
     // 列表
     ol,ul {
@@ -54,32 +93,7 @@
         margin: 1rem 0 0;
     }
 
-    // 格式化文本和代码
-    code {
-        font-family: $monospace;
-        font-size: .875rem;
-        color: var(--grey-100);
-        background-color: var(--grey-700);
-        padding: .125rem .375rem;
-    }
 
-    pre {
-        * {
-            padding: 0;
-        }
-        font-size: .875rem;
-        padding: 1rem;
-        background-color: var(--grey-100);
-        border: 1px solid var(--grey-400);
-        line-height: 1.5rem;
-        overflow: auto;
-
-        code {
-            color: var(--grey-100);
-            background-color: var(--grey-700);
-        }
-
-    }
 
     // 表格
     table {
