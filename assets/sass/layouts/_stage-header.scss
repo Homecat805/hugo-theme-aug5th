@@ -1,0 +1,37 @@
+.stage-header {
+
+    border-bottom: 1px solid var(--baseof-border-color);
+
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    .site-title {
+        padding: .75rem 1rem;
+        font-size: 1.25rem;
+        color: var(--baseof-title-color);
+    }
+
+    .inner-flex-1 {
+        flex: 1;
+    }
+
+
+}
+
+
+#side-toggle {
+    cursor: pointer;
+    font-size: 1.5rem;
+
+    .open {
+        padding: 1rem;
+    }
+
+    .close {
+        padding: 1rem;
+        display: none;
+    }
+}

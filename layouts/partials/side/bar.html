@@ -1,0 +1,47 @@
+<div class="sidebar">
+
+    <div class="logo">
+        <img src="{{ "image/logo/primary.png" | relURL }}" alt="Logo-img">
+    </div>
+
+    <p class="title">{{ .Site.Title }}</p>
+    
+    <p class="description">{{ .Site.Params.description }}</p>
+
+
+
+    <ul class="menu">
+        {{ $current := . }}
+        {{ range .Site.Menus.main }}
+        
+            {{ $active := eq .Name $current.Title }}
+            {{ $active = or $active ( eq .Identifier $current.Section ) }}
+            <li class="menu-item">
+                <a class="item-link {{ if $active }} active {{ end }}" href="{{ .URL }}">
+                    <span class="item-icon">{{ .Pre }}</span>
+                    <span class="item-name">{{ .Name }}</span>
+                </a>
+            </li>        
+        {{ end }}
+    </ul>
+
+    <div class="container-flex-1"></div>
+
+    <div class="rss">
+        <span><a href="#"><i class="bi bi-rss-fill"></i></a></span>
+    </div>
+    <p class="support">Powered by HUGO</p>
+    
+</div>
+
+
+
+        
+    
+    
+    
+    
+    
+    
+    
+    

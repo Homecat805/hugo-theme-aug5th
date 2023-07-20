@@ -1,14 +1,19 @@
 {{ define "stage-necker" }}
-    {{- partial "stager/breadcrumb.html" . -}}
+<div class="stage-necker">
+    {{- partial "stage/breadcrumb.html" . -}}
+</div>
 {{ end }}
 
 {{ define "stage-center" }}
+<div class="stage-center">
+
 
     <main class="main">
-        {{- partial "stager/content.html" . -}}
+        {{- partial "stage/content.html" . -}}
     </main>
-    <aside class="single-aside">
-        {{- partial "stager/cards-single.html" . -}}
+    <aside class="aside-wide">
+        {{- partial "stage/cards-single.html" . -}}
     </aside>
 
+</div>
 {{ end }}

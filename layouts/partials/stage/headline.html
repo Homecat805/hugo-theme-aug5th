@@ -1,0 +1,10 @@
+<div class="headline">
+    {{ range after 1 (first 7 (where .Site.RegularPages "Params.headline" true)) }}
+    <section class="item-container">
+        <div class="item">
+            <a href="{{ .Permalink }}">{{ .Title }}</a>
+            {{ .Summary }}
+       </div>
+    </section>
+    {{ end }}
+</div>

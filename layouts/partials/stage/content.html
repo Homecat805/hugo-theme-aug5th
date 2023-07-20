@@ -1,0 +1,26 @@
+<div class="content-container">
+
+    <article class="content">
+        <p class="content-title">{{ .Title }}</p>
+        <p class="content-meta">
+            <span>{{ .Date.Format "2006-01-02" }}</span>
+            {{ with .Params.Author }}
+                <span>{{ . }}</span>
+            {{ else }}
+                <span>{{ .Site.Author.name }}</span>
+            {{ end }}
+        </p>
+        <div class="markdown">{{ .Content }}</div>
+    </article>
+
+</div>
+
+
+
+
+
+
+
+
+
+

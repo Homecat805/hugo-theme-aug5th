@@ -1,0 +1,180 @@
+.cards {
+    position: sticky;
+    top: 1rem;
+
+    .card-container {
+        margin-top: 1rem;
+
+        .card {
+            position: relative;
+            padding-top: .5rem;
+
+            a {
+                font-size: .875rem;
+                text-decoration: none;
+                color: var(--card-text-color);
+                background-color: var(--card-background-color);
+                transition: all .5s;
+                &:hover {
+
+                    color: var(--card-text-color-hover);
+                    background-color: var(--card-background-color-hover);
+
+                }
+            }
+
+            .card-title {
+                border-top: 1px solid var(--card-title-color);
+                width: 50%;
+
+                p {
+
+
+
+                    position: absolute;
+                    top: -.5rem;
+                    left: .75rem;
+    
+                    background-color: var(--baseof-background-color);
+                    color: var(--card-title-color);
+                    padding: 0 .5rem;
+    
+
+                }
+
+
+
+
+
+            }
+
+            .dumbbell-content {
+                padding: 1rem 0;
+
+
+                .dumbbell {
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    justify-content: space-between;
+
+                    padding: .25rem .5rem;
+                    margin: .125rem 0;
+
+
+                    text-decoration: none;
+
+                    border-radius: .375rem;
+
+
+
+                    .dashed-line {
+                        flex: 1;
+                        margin: 0 1rem;
+                        border: 1px dashed var(--baseof-border-color);
+                    }
+
+                }
+            }
+
+            .capsule-content {
+                padding: 1rem 0;
+
+
+                display: flex;
+                flex-flow: wrap;
+                .capsule {
+
+                    text-decoration: none;
+                    border-radius: .375rem;
+
+
+                    display: block;
+                    padding: .25rem .5rem;
+                    margin: 1px 8px 1px 0;
+
+                }
+            }
+
+            .normal-content {
+                padding: 1rem 0;
+
+                .normal {
+
+                    text-decoration: none;
+                    border-radius: .375rem;
+                    font-size: .875rem;
+
+                    display: flex;
+                    justify-content: stretch;
+                    padding: .25rem .5rem;
+                    margin: .125rem 0;
+
+                    i {
+                        margin-right: .5rem;
+                        font-size: 1rem;
+                    }
+
+                }
+
+            }
+
+            .tag-content {
+
+                padding: 1rem 0;
+
+
+                ul {
+                    list-style: none;
+
+                    li {
+                        ul {
+                            margin-left: 1rem;
+                        }
+
+                        a {
+                            display: inline-block;
+
+                            line-height: 1.5rem;
+                            padding: 0 .5rem;
+
+                            border-radius: .375rem;
+
+                            &::before {
+                                content: "\2022";
+                                font-weight: bold;
+                                display: inline-block; 
+                                width: 1rem;
+    
+                            }
+
+                        }
+
+                    }
+                }
+                
+            }
+    
+        }
+
+    }
+
+}
+
+@media screen and (min-width: $md) {
+
+    .cards {
+
+    
+        .card-container {
+
+    
+            .card {
+        
+            }
+    
+        }
+    
+    }
+
+}

@@ -13,12 +13,11 @@
 <title>{{ .Title }} ｜ {{ .Site.Title }}</title>
 
 <!-- Favicon & icons -->
-<link href={{ "favicon.png" | relURL }} rel="icon">
+<link href={{ "./favicon.png" | relURL }} rel="icon">
 <link href="{{ "./vendor/bootstrap-icons/1.10.5/font/bootstrap-icons.min.css" | relURL }}" rel="stylesheet">
 
 <!-- Fonts -->
-<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900">
-<link href="https://fonts.googleapis.com/css?family=Noto+Sans+SC:100,300,400,500,700,900" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet" type="text/css">
 
 <!-- Local CSS from SASS-->
 {{ $sass := resources.Get "sass/main.scss" }}

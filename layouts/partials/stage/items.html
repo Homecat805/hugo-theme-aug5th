@@ -1,0 +1,24 @@
+<div class="items">
+    {{ range .Pages }}
+    <section class="item-container">
+        <div class="item">
+            <p class="item-title"> <a href="{{ .Permalink }}">{{ .Title }}</a></p>
+            {{ .Summary }}
+            <p class="item-meta">
+
+
+                <span><i class="bi bi-folder"></i></span>
+                <span>{{ .Params.Categories }}</span>
+
+                <span><i class="bi bi-calendar2-date"></i></span>
+                <span>{{ .Date.Format "2006-01-02" }}</span>
+
+                <span><i class="bi bi-person"></i></span>
+                <span>{{ .Site.Author.name }}</span>
+            </p>
+    
+        </div>
+    </section>
+
+    {{ end }}
+</div>

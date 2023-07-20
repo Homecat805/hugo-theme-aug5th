@@ -1,0 +1,72 @@
+.stage-center {
+
+    display: flex;
+    flex-direction: column;
+
+    .main {
+        padding: 1rem;
+        overflow: auto;
+
+    }
+
+    .aside-wide {
+        padding: 1rem;
+    }
+
+}
+
+@media screen and (min-width: $md) {
+    
+}
+
+@media screen and (min-width: $lg) {
+
+    .stage-center {
+   
+        .main {
+            padding: 1.5rem;
+        }
+    
+        .aside-wide {
+            padding: 1.5rem 1.5rem 1.5rem 0;
+        }
+    }
+
+
+}
+
+@media screen and (min-width: $xl) {
+
+    .stage-center {
+
+        flex-direction: row;
+    
+        .main {
+            flex: 1;
+            padding: 2rem;
+    
+        }
+    
+        .aside-wide {
+            width: $sider-width + 30px;
+            padding: 2rem 2rem 2rem 0;
+
+        
+        }
+    }
+    
+}
+
+@media screen and (min-width: $xxl) {
+
+    .stage-center {
+
+
+    
+        .aside-wide {
+            width: $sider-width + 130px;
+       
+        }
+    }
+
+}

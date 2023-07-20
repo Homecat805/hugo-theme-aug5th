@@ -1,0 +1,63 @@
+.headline {
+    margin-top: 1rem;
+    display: flex;
+    flex-flow: wrap;
+
+    .item-container {
+        width: 100%;
+
+        .item {
+            padding: 1rem 1rem;
+
+            a {
+                font-size: 1rem;
+                font-weight: 600;
+                color: var(--baseof-text-color-dark);
+                transition: all 1s;
+    
+                &:hover {
+                    color: var(--secondary);
+                }
+            }
+
+            p {
+                color: var(--baseof-text-color-dark);
+                font-size: .875rem;
+                margin-top: .5rem;
+
+            }
+        }
+    }
+    
+}
+
+
+@media screen and (min-width: $md) {
+
+
+    
+}
+
+@media screen and (min-width: $lg) {
+    .headline {
+
+    
+        .item-container {
+            width: 50%;
+    
+            
+        }
+        
+    }
+
+
+}
+@media screen and (min-width: $xl) {
+
+
+    
+}
+
+@media screen and (min-width: $xxl) {
+
+}

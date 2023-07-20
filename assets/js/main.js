@@ -8,9 +8,9 @@ $(document).ready(function(){
 
     // Sider Controll Start
 
-    const sider = $('#sider');
-    const siderOpenBtn = $('#sider-button').children('.open');
-    const siderCloseBtn = $('#sider-button').children('.close');
+    const sider = $('#side');
+    const siderOpenBtn = $('#side-toggle').children('.open');
+    const siderCloseBtn = $('#side-toggle').children('.close');
 
     siderOpenBtn.click(function(){
         sider.animate({left:'0'});
@@ -19,22 +19,12 @@ $(document).ready(function(){
     });
 
     siderCloseBtn.click(function(){
-        sider.animate({left:'-270px'});
+        sider.animate({left:'-240px'});
         siderOpenBtn.show();
         siderCloseBtn.hide();
     });
 
     // Sider Controll End
-
-    // Menu
- 
-    menuItemToggle.click(function(){
-
-        $(this).parents('.menu-item').siblings().children('.sub-menu').slideUp();
-
-        $(this).parents('.menu-item').find('.sub-menu').slideToggle();
-        
-    });
 
 
 });

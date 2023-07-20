@@ -1,22 +1,22 @@
 // Breakpoint
+$sm: 576px;
+$md: 768px;
+$lg: 992px;
+$xl: 1200px;
+$xxl: 1400px;
 
-$sm: 576px !default;
-$md: 768px !default;
-$lg: 992px !default;
-$xl: 1200px !default;
-$xxl: 1400px !default;
-
-// 字体
-
-$sans-serif: Poppins, "Noto+Sans+SC", sans-serif !default;
-$monospace: monospace !default;
-
-// 基础值
+// Fonts
+// Font-family
+$sans-serif: Poppins, sans-serif;
+$monospace: monospace;
+// Font-size
 $font-base-size: 16px;
 
-// 尺寸
-
+// Size
+// Header
 $header-height: 60px;
-
-$side-original-position: -240px;
-$side-width: 240px;
+// Sider
+$sider-original-position: -240px;
+$sider-width: 240px;
+// Card-container
+$card-container-width: 350px;

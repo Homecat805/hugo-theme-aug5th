@@ -3,18 +3,20 @@
 @import "basic/init";
 
 @import "layouts/baseof";
-@import "layouts/container";
+@import "layouts/side-bar";
+@import "layouts/stage-header";
+@import "layouts/stage-necker";
+@import "layouts/stage-center";
+@import "layouts/stage-footer";
 
-@import "components/stager/title";
-@import "components/stager/toggle";
-@import "components/stager/copyright";
-@import "components/stager/breadcrumb";
-@import "components/stager/items";
-@import "components/stager/cards";
-@import "components/stager/content";
-@import "components/stager/markdown";
+@import "components/topone";
+@import "components/headline";
+@import "components/items";
+@import "components/cards";
+@import "components/content";
+@import "components/markdown";
 
-@import "components/sider/sidebar";
+
 
 
 

@@ -1,0 +1,33 @@
+.topone {
+
+    border: 1px solid var(--baseof-border-color);
+    border-radius: 1rem;
+
+    img {
+        border-radius: 1rem 1rem 0 0;
+    }
+
+
+    .description {
+        padding: 1rem;
+        background-color: var(--grey-100);
+
+        border-radius: 0 0 1rem 1rem;
+
+        a {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: var(--baseof-text-color-dark);
+            transition: all 1s;
+
+            &:hover {
+                color: var(--secondary);
+            }
+        }
+
+        p {
+            color: var(--baseof-text-color-dark);
+        }
+    }
+
+}

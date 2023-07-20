@@ -1,0 +1,10 @@
+
+{{ range first 1 (where .Site.RegularPages "Params.headline" true) }}
+<section class="topone">
+    <img src="{{ .Params.thumbnail | absURL }}" alt="Top One">
+    <div class="description">
+        <a href="{{ .Permalink }}">{{ .Title }}</a>
+        {{ .Summary }}
+    </div>
+</section>
+{{ end }}

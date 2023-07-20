@@ -1,17 +1,11 @@
-{{ define "stage-necker" }}
-
-{{ end }}
-
 {{ define "stage-center" }}
-
+<div class="stage-center">
     <main class="main">
-        {{- partial "stager/topone" . -}}
-        {{- partial "stager/headline" . -}}
+        {{- partial "stage/topone.html" . -}}
+        {{- partial "stage/headline.html" . -}}
     </main>
+    <aside class="aside-wide">
 
-
-    <aside class="list-aside">
-        {{- partial "stager/cards-home.html" . -}}
     </aside>
-
+</div>
 {{ end }}
