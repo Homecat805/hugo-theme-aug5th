@@ -49,16 +49,20 @@
     // 格式化文本 或 长代码
     pre {
 
-        background-color: var(--grey-100);
         overflow-y: hidden;
         overflow-x: auto;
 
-
-
         code {
-            color: var(--grey-100);
-            background-color: var(--grey-700);
             padding: 0;
+            span {
+                display: flex;
+                align-items: center;
+                span {
+                    padding: .125rem 0;
+                }
+
+            }
+
         }
 
     }
