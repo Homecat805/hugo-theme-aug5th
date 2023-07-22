@@ -42,12 +42,15 @@
     // 短代码
     code {
         font-family: $monospace;
-        background-color: var(--grey-100);
+        background-color: var(--grey-900);
+        color: var(--grey-100);
         padding: .125rem .375rem;
     }
 
     // 格式化文本 或 长代码
     pre {
+        padding: .25rem;
+        margin-top: 1rem;
 
         overflow-y: hidden;
         overflow-x: auto;
@@ -55,22 +58,83 @@
         code {
             padding: 0;
             span {
-                display: flex;
-                align-items: center;
                 span {
-                    padding: .125rem 0;
+                    margin: .25rem 0;
                 }
-
             }
+        }
+    }
+    
+    // 引用
+    blockquote {
+        border-left: .375rem solid var(--secondary);
+        background-color: var(--grey-100);
+        font-size: .875rem;
+        margin: 1rem 0 0 2rem;
+        padding: 1rem 1.5rem;
+        p {
+            margin: 0;
+            color: var(--grey-600);
+        }
+    }
 
+    // 脚注
+    .footnotes {
+        margin-top: 3rem;
+        border-top: 1px solid var(--grey-200);
+
+        hr {
+            display: none;
         }
 
+        ol {
+            font-size: .875rem;
+            padding-left: 1rem;
+            li {
+                padding-left: .5rem;
+                p {
+                    line-height: 1.5rem;
+                    .footnote-backref {
+                        padding: 0 .25rem;
+
+                    }
+                }
+            }
+        }
+    }
+
+    cite {
+        .footnote-ref {
+
+            font-style: normal;
+            padding: .125rem .125rem;
+
+            &::before {
+                content: "[";
+                padding-right: .125rem;
+            }
+
+            &::after {
+                content: "]";
+                padding-left: .125rem;
+            }
+        }
     }
 
 
+    // 链接
+    a {
+        padding: .125rem .5rem;
 
-
-
+        color: var(--link-text-color);
+        background-color: var(--link-background-color);
+        transition: all 1s;
+        &:hover {
+            text-decoration: none;
+            color: var(--link-text-color-hover);
+            background-color: var(--link-background-color-hover);
+        }
+    }
 
     // 列表
     ol,ul {
@@ -86,103 +150,41 @@
         }
     }
     ul {
-        list-style: disc;
+        li {
+            list-style: disc;
+        }
+
     }
 
     // 图片
     img {
-        display: block;
-        width: 100%;
-        max-width: 100%;
         margin: 1rem 0 0;
     }
 
-
-
     // 表格
-    table {
-        overflow: auto; 
-        margin-top: 1rem;
-        font-size: .875rem;
-        color: var(--grey-700);
-        tr {}
-        th {
-            background-color: var(--secondary);
-            padding: .5rem .75rem;
-            text-align: center;
-            color: var(--grey-800);
-        }
-        td {
-            background-color: var(--grey-100);
-            padding: .25rem .5rem;
-            text-align: center;
-        }
-    }
+    .table-container {
+        overflow: auto;
 
-    // 引用
-    blockquote {
-        border-left: .375rem solid var(--secondary);
-        background-color: var(--grey-100);
-        font-size: .875rem;
-        margin: 1rem 0 0 1rem;
-        padding: 1rem 1.5rem;
-        p {
-            margin: 0;
-            color: var(--grey-600);
-        }
-    }
-
-    // 脚注
-    .footnotes {
-        margin-top: 3rem;
-        border-top: 1px solid var(--grey-200);
-        ol {
+        table {
+            overflow: auto; 
+            margin-top: 1rem;
             font-size: .875rem;
-            padding-left: 2rem;
-            padding-right: 1rem;
-        }
-        hr {
-            display: none;
-        }
-        p {
-            font-size: .875rem;
-            line-height: 1.5rem;
-        }
-
-        .footnote-backref {
-            color: rgb(204, 26, 79);
-            border: 0;
-        }
-    }
-
-    cite {
-        font-style: normal;
-        a:before {
-            content: "[";
-        }
-        a:after {
-            content: "]";
+            color: var(--grey-700);
+            tr {}
+            th {
+                background-color: var(--secondary);
+                padding: .5rem .75rem;
+                text-align: center;
+                color: var(--grey-800);
+            }
+            td {
+                background-color: var(--grey-100);
+                padding: .25rem .5rem;
+                text-align: center;
+            }
         }
 
     }
-
-
-
-
-
-
-
-    // 链接
-    a {
-        color: pink;
-        text-decoration: none;
-        transition: all 1s;
-        &:hover {
-            text-decoration: underline;
-            color: pink;
-        }
-    }
-
 
     // 键盘按键
     kbd {

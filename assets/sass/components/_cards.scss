@@ -1,9 +1,9 @@
 .cards {
     position: sticky;
-    top: 1.5rem;
+    top: 1rem;
 
     .card-container {
-        margin-top: 1rem;
+        margin-bottom: 1rem;
 
         .card {
             position: relative;
@@ -23,13 +23,9 @@
             }
 
             .card-title {
-                border-top: 1px solid var(--card-title-color);
-                width: 50%;
 
                 p {
-                    position: absolute;
-                    top: -.5rem;
-                    left: .75rem;
+                    text-align: right;
     
                     background-color: var(--baseof-background-color);
                     color: var(--card-title-color);

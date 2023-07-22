@@ -16,6 +16,7 @@
 
     --primary:#006a57;
     --secondary: #ffb400;
+    --third: #CC1A4F;
 
     // Baseof Colors
     --baseof-text-color:var(--grey-600);
@@ -41,10 +42,16 @@
     --card-background-color-hover:var(--secondary);
 
     // Items Colors
-    --item-title-color:var(--grey-800);
+    --item-title-color:var(--primary);
     --item-title-color-hover:var(--secondary);
-    --item-summary-color:var(--grey-700);
+    --item-summary-color:var(--grey-600);
     --item-meta-color:var(--grey-600);
+
+    // Link Colors
+    --link-text-color: var(--third);
+    --link-text-color-hover: var(--white);
+    --link-background-color: var(--white);
+    --link-background-color-hover: var(--third);
 
 }
 
