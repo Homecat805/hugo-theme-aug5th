@@ -1,0 +1,14 @@
+<!-- image -->
+<figure>
+    <img src="{{ .Get "src" }}" />
+    <figcaption>
+        <span>{{ .Get "title" }}</span>
+        <span><i class="bi bi-c-circle"></i></span>
+        {{ with .Get "author" }}
+        <span>{{ . }}</span>
+        {{ else }}
+        <span>Anonymous</span>
+        {{ end }}        
+    </figcaption>
+</figure>
+<!-- image -->
