@@ -13,6 +13,40 @@
         <div class="markdown">{{ .Content }}</div>
     </article>
 
+     <!-- 标签 -->
+     {{ with .Params.tags }}
+     <div class="content-tag">
+         {{ range . }}
+         <a href="{{ "tags/" | relLangURL }}{{ . | urlize }}">{{ . }}</a>
+         {{ end }}
+     </div> 
+     {{ end }}
+
+
+
+     <!-- Navigator -->
+    <div class="content-nav">
+
+        <div class="item-container">
+        {{ with .PrevInSection }}
+            <a class="item-left" href="{{.Permalink}}">
+                <span class="item-icon"><i class="bi bi-chevron-left"></i></span>
+                <span class="item-title">{{.Title}}</span>
+            </a>
+        {{ end }}
+        </div>
+
+        <div class="item-container">
+        {{ with .NextInSection }}
+            <a class="item-right" href="{{.Permalink}}">
+                <span class="item-title">{{.Title}}</span>
+                <span class="item-icon"><i class="bi bi-chevron-right"></i></span>
+            </a>
+        {{ end }}
+        </div>
+ 
+    </div>
+
 </div>
 
 

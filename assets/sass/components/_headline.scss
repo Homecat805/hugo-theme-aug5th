@@ -6,29 +6,33 @@
     .item-container {
         width: 100%;
 
-        .item {
-            padding: 1rem 1rem;
+        &:nth-child(odd) {
+            padding: .75rem .75rem .75rem 0;
+        }
 
+        &:nth-child(even) {
+            padding: .75rem 0 .75rem .75rem;
+        }
+
+        .item {
             a {
                 font-size: 1rem;
                 font-weight: 600;
-                color: var(--primary);
+                color: var(--item-title-color);
                 transition: all 1s;
     
                 &:hover {
-                    color: var(--secondary);
+                    color: var(--item-title-color-hover);
                 }
             }
 
             p {
-                color: var(--baseof-text-color-dark);
+                color: var(--item-summary-color);
                 font-size: .875rem;
                 margin-top: .5rem;
-
             }
         }
     }
-    
 }
 
 
