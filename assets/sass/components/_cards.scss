@@ -26,10 +26,13 @@
 
                 p {
                     text-align: right;
-    
+
                     background-color: var(--baseof-background-color);
                     color: var(--card-title-color);
                     padding: 0 .5rem;
+                    span {
+                        padding: 0 .25rem;
+                    }
     
                 }
 

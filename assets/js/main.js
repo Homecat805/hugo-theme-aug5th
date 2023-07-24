@@ -1,3 +1,32 @@
+// Function for Modal button launchFullscreen 
+
+function launchFullscreen(element) {
+    if(element.requestFullscreen) {
+        element.requestFullscreen();
+    } else if(element.mozRequestFullScreen) {
+       element.mozRequestFullScreen();
+    } else if(element.msRequestFullscreen){
+       element.msRequestFullscreen();
+    } else if(element.webkitRequestFullscreen) {
+       element.webkitRequestFullScreen();
+    }
+}
+
+// Function for Modal button exitFullscreen 
+
+function exitFullscreen() {
+    if (document.exitFullscreen) {
+        document.exitFullscreen();
+    } else if (document.msExitFullscreen) {
+        document.msExitFullscreen();
+    } else if (document.mozCancelFullScreen) {
+       document.mozCancelFullScreen();
+    } else if (document.webkitExitFullscreen) {
+      document.webkitExitFullscreen();
+    }
+}
+
+
 $(window).resize(function(){
     location.reload();
 });
@@ -31,97 +60,45 @@ $(document).ready(function(){
     // carousel buttons
     // *************************************************************************************************
 
-    // button for launchFullscreen
-    $(".btn-fullscreen").click(function () {
-        launchFullscreen(document.documentElement);
-        $(this).hide();
-        $(this).parents(".carousel-btn-top").children(".btn-fullscreen-exit").show();
+    const carouselBtnLeft = $('.carousel').find('.left');
+    const carouselBtnRight = $('.carousel').find('.right');
+    const carouselBtnInfo = $('.carousel').find('.info');
+
+    carouselBtnInfo.click(function(){
+        const carouselInfo = $(this).parents('.carousel').find('.active').find('.carousel-item-text');
+        carouselInfo.toggle();
     });
 
-    // button for exitFullscreen
-    $(".btn-fullscreen-exit").click(function () {
-        exitFullscreen();
-        $(this).hide();
-        $(this).parents(".carousel-btn-top").children(".btn-fullscreen").show();
-    });
+    carouselBtnRight.click(function(){
+        const item = $(this).parents('.carousel').find('.active');
+        const itemFirst = $(this).parents('.carousel').find('.carousel-item-container').first();
+        
+        item.fadeOut(0).addClass("temp").removeClass("active");
+        const itemTemp = $('.carousel').find('.temp');
 
-    // button for right
-    $(".btn-right").click(function () {
-        $(".carousel-stage").children(".active").fadeOut(0).addClass("inactive temp").removeClass("active");
-        if ($(".carousel-stage").children(".temp").next().length >0){
-            $(".carousel-stage").children(".temp").next().fadeIn(500).addClass("active").removeClass("inactive");
+        if (itemTemp.next().length >0){
+            itemTemp.next().fadeIn(500).addClass("active");
         } else {
-            $(".carousel-stage").children(".carousel-item").first().fadeIn(500).addClass("active").removeClass("inactive");
+            itemFirst.fadeIn(500).addClass("active");
         }
-        $(".carousel-stage").children(".temp").removeClass("temp");
+        itemTemp.removeClass("temp");
     });
 
-    // button for left
-    $(".btn-left").click(function () {
-        $(".carousel-stage").children(".active").fadeOut(0).addClass("inactive temp").removeClass("active");
-        if ($(".carousel-stage").children(".temp").prev().length >0){
-            $(".carousel-stage").children(".temp").prev().fadeIn(500).addClass("active").removeClass("inactive");
+    carouselBtnLeft.click(function(){
+        const item = $(this).parents('.carousel').find('.active');
+        const itemLast = $(this).parents('.carousel').find('.carousel-item-container').last();
+        
+        item.fadeOut(0).addClass("temp").removeClass("active");
+        const itemTemp = $('.carousel').find('.temp');
+
+        if (itemTemp.prev().length >0){
+            itemTemp.prev().fadeIn(500).addClass("active");
         } else {
-            $(".carousel-stage").children(".carousel-item").last().fadeIn(500).addClass("active").removeClass("inactive");
+            itemLast.fadeIn(500).addClass("active");
         }
-        $(".carousel-stage").children(".temp").removeClass("temp");
+        itemTemp.removeClass("temp");
     });
 
-    // button for item-infomation
-    $(".btn-info").click(function () {
-        $(".carousel-txt-container").fadeToggle(1000);
-    });
-
-
-
-    // carousel
-    $(".carousel-toggle").click(function () {
-        $(this).parent().children(".carousel-target").fadeToggle(1000);
-    });
-
-    $(".btn-carousel-exit").click(function () {
-        if (document.fullscreenElement){
-            exitFullscreen();
-            $(this).parents(".carousel-btn-top").children(".btn-fullscreen-exit").hide();
-            $(this).parents(".carousel-btn-top").children(".btn-fullscreen").show();
-        }
-        $(this).parents(".carousel-target").fadeToggle(1000);
-    });
 });
-
-
-// Function for Modal button launchFullscreen 
-
-function launchFullscreen(element) {
-    if(element.requestFullscreen) {
-        element.requestFullscreen();
-    } else if(element.mozRequestFullScreen) {
-       element.mozRequestFullScreen();
-    } else if(element.msRequestFullscreen){
-       element.msRequestFullscreen();
-    } else if(element.webkitRequestFullscreen) {
-       element.webkitRequestFullScreen();
-    }
-}
-
-// Function for Modal button exitFullscreen 
-
-function exitFullscreen() {
-    if (document.exitFullscreen) {
-        document.exitFullscreen();
-    } else if (document.msExitFullscreen) {
-        document.msExitFullscreen();
-    } else if (document.mozCancelFullScreen) {
-       document.mozCancelFullScreen();
-    } else if (document.webkitExitFullscreen) {
-      document.webkitExitFullscreen();
-    }
-}
-
-
-
-
-
-
 
 
