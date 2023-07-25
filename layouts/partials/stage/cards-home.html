@@ -1,0 +1,45 @@
+<div class="cards">
+    
+    {{ $data := .Page.Site.Data.baseof.favorite }}
+
+    <section class="card-container">
+        <div class="card">
+            <div class="card-title">
+                <p><i class="bi bi-dot"></i><span>{{ $data.title }}</span><i class="bi bi-dot"></i></p>
+            </div>
+            <div class="capsule-content">
+
+                {{ range $id, $value := $data.item }}
+
+                <a class="capsule" href="{{ .url }}" target="_blank">
+                    <span>{{.title}}</span>
+                </a>
+
+                {{ end }}
+
+            </div>
+        </div>
+    </section>
+
+    {{ $data := .Page.Site.Data.baseof.links }}
+
+    <section class="card-container">
+        <div class="card">
+            <div class="card-title">
+                <p><i class="bi bi-dot"></i><span>{{ $data.title }}</span><i class="bi bi-dot"></i></p>
+            </div>
+            <div class="capsule-content">
+
+                {{ range $id, $value := $data.item }}
+
+                <a class="capsule" href="{{ .url }}" target="_blank">
+                    <span>{{.title}}</span>
+                </a>
+
+                {{ end }}
+
+            </div>
+        </div>
+    </section>
+
+</div>
