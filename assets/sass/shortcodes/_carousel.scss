@@ -41,27 +41,36 @@
                     position: absolute;
                     bottom: 0;
                     left: 0;
-                    width: 100%;
-                    max-width: 800px;
+                    right: 0;
+
 
                     background-color: rgba(#000000, .75);
 
-                    padding: 1rem;
+                    padding: 1.5rem;
 
-                    p {
-                        color: var(--grey-300);
-                        &:nth-child(1){
-                            font-size: 1.5rem;
+                    .text-container {
+                        margin: 0 auto;
+                        width: 100%;
+                        max-width: 800px;
+
+
+                        p {
+                            color: var(--grey-300);
+                            &:nth-child(1){
+                                font-size: 1.5rem;
+                            }
+    
+                            span {
+                                font-size: .875rem;
+                                margin-right: .5rem;
+                                i {
+                                    margin-right: .25rem;
+                                }
+                            }
                         }
+
                     }
 
-                    span {
-                        font-size: .875rem;
-                        margin-right: .5rem;
-                        i {
-                            margin-right: .25rem;
-                        }
-                    }
                 }
                 
             }

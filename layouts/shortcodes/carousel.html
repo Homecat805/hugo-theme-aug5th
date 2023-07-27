@@ -10,19 +10,23 @@
                     <img src="{{.url}}" alt="{{.title}}">
                 </div>
                 <div class="carousel-item-text">
-                    <p>{{.title}}</p>
-                    <p>{{.description}}</p>
-                    <p>
-                        <span>{{.id}} / {{$data.total}}</span>
-                        <span>|</span>
-                        {{with .memo }}
-                        <span>{{.}}</span>
-                        <span>|</span>
-                        {{end}}
-                        {{with .author }}
-                        <span><i class="bi bi-c-circle"></i>{{.}}</span>
-                        {{end}}
-                    </p>
+                    <div class="text-container">
+                        <p>{{.title}}</p>
+                        <p>{{.description}}</p>
+                        <p>
+                            <span>{{.id}} / {{$data.total}}</span>
+                            <span>|</span>
+                            {{with .memo }}
+                            <span>{{.}}</span>
+                            <span>|</span>
+                            {{end}}
+                            {{with .author }}
+                            <span><i class="bi bi-c-circle"></i>{{.}}</span>
+                            {{end}}
+                        </p>
+
+                    </div>
+
                 </div>
             </div>
             {{end}}
