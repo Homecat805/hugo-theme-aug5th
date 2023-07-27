@@ -27,10 +27,6 @@ function exitFullscreen() {
 }
 
 
-$(window).resize(function(){
-    location.reload();
-});
-
 $(document).ready(function(){
 
     'use strict';
@@ -97,6 +93,27 @@ $(document).ready(function(){
             itemLast.fadeIn(500).addClass("active");
         }
         itemTemp.removeClass("temp");
+    });
+
+    const carouselModal = $('.carousel-container');
+    const carouselBtnFullscreen = $('.carousel').find('.fullscreen');
+    const carouselBtnFullscreenExit = $('.carousel').find('.fullscreen-exit');
+
+
+    carouselBtnFullscreen.click(function(){
+        launchFullscreen(document.documentElement);
+        carouselModal.removeClass('carousel-container').addClass('carousel-modal-container');
+        carouselBtnFullscreenExit.show();
+        carouselBtnFullscreen.hide();
+    });
+
+    carouselBtnFullscreenExit.click(function(){
+
+        exitFullscreen();
+        carouselModal.removeClass('carousel-modal-container').addClass('carousel-container');
+        carouselBtnFullscreenExit.hide();
+        carouselBtnFullscreen.show();
+
     });
 
 });

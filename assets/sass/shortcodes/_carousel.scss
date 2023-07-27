@@ -17,13 +17,13 @@
                 position: relative;
 
                 .carousel-item-img {
+
+                    aspect-ratio: 16/9;
     
                     display: flex;
                     align-items: center;
                     justify-content: center;
-        
-                    aspect-ratio: 16/9;
-    
+            
                     img {
                         margin-top: 0;
 
@@ -43,7 +43,6 @@
                     left: 0;
                     right: 0;
 
-
                     background-color: rgba(#000000, .75);
 
                     padding: 1.5rem;
@@ -52,7 +51,6 @@
                         margin: 0 auto;
                         width: 100%;
                         max-width: 800px;
-
 
                         p {
                             color: var(--grey-300);
@@ -123,4 +121,150 @@
         }
 
     }
+
 }
+
+.carousel-modal-container {
+    margin-top: 0;
+
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    z-index: 1000;
+
+    .carousel {
+
+        .carousel-stage {
+
+            background-color: var(--grey-100);
+
+            .carousel-item-container {
+                
+                display: none;
+                
+                position: relative;
+
+
+                .carousel-item-img {
+                    height: 100vh;
+
+                    padding: .5rem .5rem 3.1rem .5rem;
+
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+
+
+
+            
+                    img {
+                        margin-top: 0;
+
+                        width: auto;
+                        max-width: 100%;
+                        height: auto;
+                        max-height: 100%;
+                    }
+    
+                }
+
+                .carousel-item-text {
+                    display: none;
+
+                    position: absolute;
+                    bottom: 2.5rem;
+                    left: 0;
+                    right: 0;
+
+                    background-color: rgba(#000000, .75);
+
+                    padding: 1.5rem;
+                    margin: .5rem;
+
+                    .text-container {
+                        margin: 0 auto;
+                        width: 100%;
+                        max-width: 800px;
+
+                        p {
+                            color: var(--grey-300);
+                            &:nth-child(1){
+                                font-size: 1.5rem;
+                            }
+    
+                            span {
+                                font-size: .875rem;
+                                margin-right: .5rem;
+                                i {
+                                    margin-right: .25rem;
+                                }
+                            }
+                        }
+
+                    }
+
+                }
+                
+            }
+
+            .active {
+                display: block;
+            }
+        }
+
+        .carousel-button-container {
+
+            position: absolute;
+            bottom: 0;
+            left: 0;
+
+            width: 100%;
+
+            border-top: 1px solid var(--baseof-border-color);
+            border-left: 1px solid var(--baseof-border-color);
+            border-bottom: 1px solid var(--baseof-border-color);
+
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+
+            span {
+                height: 2.5rem;
+                border-right: 1px solid var(--baseof-border-color);
+                background-color: var(--grey-100);
+            }
+
+            .flex-1 {
+                flex: 1;
+
+            }
+
+            .carousel-button {
+                width: 2.5rem;
+
+                text-align: center;
+                font-size: 1rem;
+                line-height: 2.5rem;
+
+                cursor: pointer;
+                transition: all 1s;
+                &:hover {
+                    background-color: var(--grey-200);
+                }
+            }
+
+            .fullscreen-exit {
+                display: none;
+            }
+
+        }
+
+    }
+
+}
+
