@@ -61,19 +61,19 @@ $(document).ready(function(){
     const carouselBtnInfo = $('.carousel').find('.info');
 
     carouselBtnInfo.click(function(){
-        const carouselInfo = $(this).parents('.carousel').find('.active').find('.carousel-item-text');
+        const carouselInfo = $(this).parents('.carousel').find('.active').find('.item-info');
         carouselInfo.toggle();
     });
 
     carouselBtnRight.click(function(){
         const item = $(this).parents('.carousel').find('.active');
-        const itemFirst = $(this).parents('.carousel').find('.carousel-item-container').first();
+        const itemFirst = $(this).parents('.carousel').find('.carousel-item').first();
         
         item.fadeOut(0).addClass("temp").removeClass("active");
         const itemTemp = $('.carousel').find('.temp');
 
-        if (itemTemp.next().length >0){
-            itemTemp.next().fadeIn(500).addClass("active");
+        if (itemTemp.next('.carousel-item').length >0){
+            itemTemp.next('.carousel-item').fadeIn(500).addClass("active");
         } else {
             itemFirst.fadeIn(500).addClass("active");
         }
@@ -82,7 +82,7 @@ $(document).ready(function(){
 
     carouselBtnLeft.click(function(){
         const item = $(this).parents('.carousel').find('.active');
-        const itemLast = $(this).parents('.carousel').find('.carousel-item-container').last();
+        const itemLast = $(this).parents('.carousel').find('.carousel-item').last();
         
         item.fadeOut(0).addClass("temp").removeClass("active");
         const itemTemp = $('.carousel').find('.temp');

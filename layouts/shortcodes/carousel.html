@@ -3,54 +3,63 @@
 
 <div class="carousel-container">
     <div class="carousel">
-        <div class="carousel-stage">
-            {{ range $id, $value := $data.item }}
-            <div class="carousel-item-container  {{ if eq $id 0 }} active {{ else }} inactive {{ end }}">
-                <div class="carousel-item-img">
-                    <img src="{{.url}}" alt="{{.title}}">
-                </div>
-                <div class="carousel-item-text">
-                    <div class="text-container">
-                        <p>{{.title}}</p>
-                        <p>{{.description}}</p>
-                        <p>
-                            <span>{{.id}} / {{$data.total}}</span>
-                            <span>|</span>
-                            {{with .memo }}
-                            <span>{{.}}</span>
-                            <span>|</span>
-                            {{end}}
-                            {{with .author }}
-                            <span><i class="bi bi-c-circle"></i>{{.}}</span>
-                            {{end}}
-                        </p>
 
-                    </div>
+        {{ range $id, $value := $data.item }}
+        <div class="carousel-item {{ if eq $id 0 }} active {{ end }}">
 
+            <div class="item-img">
+                <img src="{{.url}}" alt="{{.title}}">
+            </div>
+
+            <div class="item-info">
+                <div class="text-container">
+                    <p>{{.title}}</p>
+                    <p>{{.description}}</p>
+                    <p>
+                        <span>{{.id}} / {{$data.total}}</span>
+                        <span>|</span>
+                        {{with .memo }}
+                        <span>{{.}}</span>
+                        <span>|</span>
+                        {{end}}
+                        {{with .author }}
+                        <span><i class="bi bi-c-circle"></i>{{.}}</span>
+                        {{end}}
+                    </p>
                 </div>
             </div>
-            {{end}}
+
         </div>
+        {{end}}
 
         <div class="carousel-button-container">
+
             <span class="carousel-button left">
                 <i class="bi bi-chevron-left"></i>
             </span>
+
             <span class="flex-1">
 
             </span>
+                       
             <span class="carousel-button info">
                 <i class="bi bi-info-lg"></i>
             </span>
+            
             <span class="carousel-button fullscreen-exit">
                 <i class="bi bi-fullscreen-exit"></i>
             </span>
+            
             <span class="carousel-button fullscreen">
                 <i class="bi bi-fullscreen"></i>
             </span>
+
             <span class="carousel-button right">
                 <i class="bi bi-chevron-right"></i>
             </span>
+            
         </div>
+
     </div>
+
 </div>
