@@ -54,21 +54,19 @@
     --link-background-color-hover: var(--third);
 
     // Carousel Colors
-    --carousel-background-color: var(--grey-100);
-    --carousel-button-text-color: var(--grey-600);
-    --carousel-button-background-color: var(--grey-100);
-    --carousel-button-text-color-hover: var(--grey-600);
-    --carousel-button-background-color-hover: var(--grey-200);
-    --carousel-item-info-text-color: var(--grey-300);
-    --carousel-item-info-background-color: var(--grey-800);
+    --carousel-background-color: var(--grey-700);
 
-    --carousel-modal-background-color: var(--grey-100);
-    --carousel-modal-button-text-color: var(--grey-600);
-    --carousel-modal-button-background-color: var(--grey-100);
-    --carousel-modal-button-text-color-hover: var(--grey-600);
-    --carousel-modal-button-background-color-hover: var(--grey-200);
-    --carousel-modal-item-info-text-color: var(--grey-300);
-    --carousel-modal-item-info-background-color: var(--grey-800);
+    --carousel-border-color: var(--grey-500);
+
+    --carousel-button-text-color: var(--grey-500);
+    --carousel-button-background-color: var(--grey-700);
+    --carousel-button-text-color-hover: var(--grey-100);
+    --carousel-button-background-color-hover: var(--grey-800);
+
+    --carousel-item-info-text-color: var(--grey-300);
+    --carousel-item-info-background-color: rgba(0,0,0,.75);
+
+
 }
 
 :root[theme="other"] {
