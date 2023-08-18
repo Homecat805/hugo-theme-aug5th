@@ -1,0 +1,19 @@
+{
+    "title": "FRIENDLY LINK",
+    "item": [
+        { 
+            "title": "SJTU", 
+            "url": "https://sjtu.edu.cn"
+        },
+        { 
+            "title": "Homecat", 
+            "url": "https://genway.com.cn/"
+        },
+
+        { 
+            "title": "Shanghai Museum", 
+            "url": "https://www.shanghaimuseum.net/mu/frontend/pg/index"
+        }
+
+    ]
+ }

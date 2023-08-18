@@ -1,0 +1,57 @@
+baseURL = 'https://genway.com.cn/'
+languageCode = 'en-us'
+title = 'Sitename'
+
+theme = 'aug5th'
+
+[Author]
+    name = 'Author Name'
+    description = 'A demo site of Aug5th.'
+
+[Params]
+    colorscheme = 'default'
+
+
+[menu]
+[[menu.main]]
+    Identifier = 'home'
+    Name = 'Home'
+    Pre = '<i class="bi bi-house"></i>'
+    URL = '/'
+    Weight = 10
+[[menu.main]]
+    Identifier = 'blog'
+    Name = 'Blog'
+    Pre = '<i class="bi bi-pencil-square"></i>'
+    URL = '/blog/'
+    Weight = 20
+[[menu.main]]
+    Identifier = 'github'
+    Name = 'Github'
+    Pre = '<i class="bi bi-github"></i>'
+    URL = 'https://github.com/homecat805'
+    Weight = 30
+
+
+
+# 用于渲染的参数
+[markup]
+    defaultMarkdownHandler = 'goldmark'
+    [markup.goldmark.renderer]
+        unsafe = true
+    [markup.highlight]
+        codeFences = true
+        guessSyntax = true
+        lineNos = true
+        lineNumbersInTable = false
+
+
+# 用于 Hugo theme 发布的参数
+[module]
+  [module.hugoVersion]
+    extended = true
+    min = "0.111.3"
+
+
+
+

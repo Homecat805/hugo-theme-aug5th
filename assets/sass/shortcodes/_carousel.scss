@@ -172,7 +172,9 @@
 
             display: none;
 
-
+            border-top: 1px solid var(--carousel-border-color);
+            border-left: 1px solid var(--carousel-border-color);
+            border-right: 1px solid var(--carousel-border-color);
 
             .item-img {
 
@@ -303,7 +305,7 @@
     }
 }
 
-@media screen and (min-width: $lg) {
+@media screen and (min-width: $xxl) {
 
     .carousel-container, .carousel-modal-container {
         .carousel {

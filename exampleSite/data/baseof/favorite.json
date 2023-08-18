@@ -1,0 +1,27 @@
+{
+    "title": "REFERENCE & TOOL",
+    "item": [
+        { 
+            "title": "Hugo Document", 
+            "url": "https://gohugo.io/documentation/"
+        },
+        { 
+            "title": "Jquery", 
+            "url": "https://jquery.com/"
+        },
+        { 
+            "title": "Boostrap 5 Document", 
+            "url": "https://getbootstrap.com/docs/5.0/getting-started/introduction/"
+        },
+        { 
+            "title": "Baidu Translation", 
+            "url": "https://fanyi.baidu.com/"
+        }
+    ]
+ }
+
+
+ 
+
+
+
