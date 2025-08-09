@@ -1,0 +1,12 @@
+<h1>{{ site.Title }}</h1>
+
+<h4>是否是多语言网站：{{ hugo.IsMultilingual }}</h4>
+<h4>语言清单：</h4>
+<ul>
+{{ range $.Site.Home.AllTranslations }}
+<li><a href="{{ .RelPermalink }}">{{ .Language.LanguageName }}</a></li>
+{{ end }}
+</ul>
+<h4>当前语言：{{ .Language.LanguageName }}</h4>
+<h4>菜单：</h4>
+{{ partial "menu.html" (dict "menuID" "main" "page" .) }}

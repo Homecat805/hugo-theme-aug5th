@@ -1,0 +1,18 @@
+baseURL = 'https://aug5th.genway.com.cn/'
+
+# 默认语言配置
+defaultContentLanguage = 'en'
+
+[params]
+    themestyle = 'red'
+
+# 用于渲染的参数
+[markup]
+    defaultMarkdownHandler = 'goldmark'
+    [markup.goldmark.renderer]
+        unsafe = true
+
+[module]
+    [module.hugoVersion]
+        extended = true
+        min = "0.148.2"
