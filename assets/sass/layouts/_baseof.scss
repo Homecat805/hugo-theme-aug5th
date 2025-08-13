@@ -1,0 +1,38 @@
+html {
+    height: 100%;
+}
+
+body {
+    height: 100%;
+
+    padding-top: 60px;
+
+    font-size: 16px;
+    font-family: Poppins, sans-serif;
+
+    display: flex;
+    flex-direction: column;
+}
+
+#header {
+    background-color: var(--white);
+    border-bottom: 1px solid var(--slate-100);
+
+    position:fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+
+    width: 100%;
+}
+
+#stager {
+    flex: 1;
+
+    background-color: var(--slate-000);
+}
+
+#footer {
+    background-color: var(--white);
+    border-top: 1px solid var(--slate-100);
+}
