@@ -1,7 +1,5 @@
 // 1. 抽象层
-@use 'abstracts/variables' as *;
-@use 'abstracts/mixins' as *;
-@use 'abstracts/functions' as *;
+
 
 // 2. 基础样式
 @use 'base/init';

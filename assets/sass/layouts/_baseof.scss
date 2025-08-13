@@ -30,9 +30,11 @@ body {
     flex: 1;
 
     background-color: var(--slate-000);
-}
+    border-bottom: 1px solid var(--slate-100);
+    border-top: 1px solid var(--slate-100);
+    }
 
 #footer {
     background-color: var(--white);
-    border-top: 1px solid var(--slate-100);
+
 }
