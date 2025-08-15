@@ -1,22 +1,7 @@
 {{ define "stager" }}
-  {{ .Content }}
-  {{ range site.RegularPages }}
-    <h2><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h2>
-    {{ .Summary }}
-  {{ end }}
-
-<hr>
-
-{{ partial "baseof/lang.html" . }}
-
-<hr>
-
-            
-
-
-
-
-
-
-
+    {{ .Content }}
+    {{ range site.RegularPages }}
+        <h2><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h2>
+        {{ .Summary }}
+    {{ end }}
 {{ end }}
