@@ -1,8 +1,10 @@
-{{.Site.LanguageCode}}
-{{ .Site.Language.LanguageName}}
-
-<ul>
-{{ range $.Site.Home.AllTranslations }}
-<li><a href="{{ .RelPermalink }}">{{ .Language.LanguageName }}</a></li>
-{{ end }}
-</ul>
+{{ $v :=  .Site.Language.LanguageName }}
+<nav>
+    <ul>
+    {{ range $.Site.Home.AllTranslations }}
+        {{ if not ( eq  .Language.LanguageName $v ) }}
+        <li><a href="{{ .RelPermalink }}">{{ .Language.LanguageName }}</a></li>
+        {{ end }}
+    {{ end }}
+    </ul>
+</nav>
