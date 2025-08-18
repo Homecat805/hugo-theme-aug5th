@@ -1,3 +1,5 @@
+@use '../abstracts/variables' as *;
+
 .page {
     background-color: var(--white);
     border: 1px solid var(--slate-200);
@@ -29,6 +31,18 @@
                 font-size: .875rem;
                 color: var(--primary-600);
             }
+        }
+    }
+
+    .markdown {
+        padding: 2rem 0;
+    }
+}
+
+@media (min-width: $sm) {
+    .page {
+        .markdown {
+            padding: 2rem 1rem;
         }
     }
 }
