@@ -13,6 +13,8 @@
 @use 'components/copyright';
 @use 'components/breadcrumb';
 @use 'components/masonry';
+@use 'components/markdown';
+@use 'components/page';
 
 // 5.特殊页面
 @use 'pages/about';

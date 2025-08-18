@@ -3,12 +3,29 @@
     <div id="breadcrumb" class="container">
         {{ partial "breadcrumb.html" . }}
     </div>
-    <h1>{{ .Title }}</h1>
-    {{ .Content }}
-    {{ range .Pages }}
-    <h2><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h2>
-    {{ .Summary }}
-    {{ end }}
+    <div id="page" class="container">
+        <article class="page">
+            <div class="title"><h2>{{.Title}}</h2></div>
+            <div class="meta">
+                <span>
+                    <i class="bi bi-calendar3"></i>
+                    {{.Date.Format "Jan 2, 2006"}}
+                </span>
+                <span>
+                    <i class="bi bi-person-circle"></i>
+                    {{ with .Params.author }}
+                        {{ . }}
+                    {{ else }}
+                        {{ .Site.Params.author }}
+                    {{ end }}
+                </span>
+            </div>
+
+            <div class="markdown">
+                <div>{{.Content}}</div>
+            </div>
+        </article>
+    </div>
 </main>
 
 <aside>
