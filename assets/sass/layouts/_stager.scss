@@ -1,0 +1,38 @@
+@use '../abstracts/variables' as *;
+
+#stager {
+    display: flex;
+    flex-direction: column;
+    main {
+        flex: 1;
+        .container {
+            padding: 1rem;
+        }
+    }
+    aside {
+        background-color: var(--primary-000);
+    }
+}
+
+@media (min-width: $md) {
+    #stager {
+        flex-direction: row;
+        main {}
+        aside {
+            width: 300px;
+        }
+    }
+}
+
+@media (min-width: $xl) {
+    #stager {
+        main {
+            .container {
+                padding: 1rem 2rem;
+            }
+        }
+        aside {
+            width: 350px;
+        }
+    }
+}

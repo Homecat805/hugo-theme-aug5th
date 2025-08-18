@@ -1,7 +1,15 @@
 {{ define "stager" }}
+<main>
+    <div id="breadcrumb" class="container">
+        {{ partial "breadcrumb.html" . }}
+    </div>
     {{ .Content }}
     {{ range site.RegularPages }}
         <h2><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h2>
         {{ .Summary }}
     {{ end }}
+</main>
+<aside>
+    <p>aside</p>
+</aside>
 {{ end }}

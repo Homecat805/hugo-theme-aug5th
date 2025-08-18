@@ -104,3 +104,9 @@
         }
     }
 }
+
+@media (min-width: $xl) {
+    #header {
+        padding: 0 1rem;
+    }
+}

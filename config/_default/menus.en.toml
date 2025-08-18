@@ -7,8 +7,3 @@
     name = 'Blog'
     pageRef = '/blog'
     weight = 20
-
-[[main]]
-    name = 'Tags'
-    pageRef = '/tags'
-    weight = 30

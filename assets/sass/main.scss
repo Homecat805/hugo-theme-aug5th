@@ -7,9 +7,11 @@
 // 3. 布局
 @use 'layouts/baseof';
 @use 'layouts/header';
+@use 'layouts/stager';
 
 // 4. 组件
 @use 'components/copyright';
+@use 'components/breadcrumb';
 
 // 5.特殊页面
 @use 'pages/about';
