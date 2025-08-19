@@ -68,7 +68,7 @@
                             color: var(--primary-600);
                         }
                     }
-                    .active {
+                    .active, .ancestor {
                         color: var(--primary-600);
                     }
                 }

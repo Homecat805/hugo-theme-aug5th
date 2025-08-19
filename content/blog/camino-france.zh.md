@@ -1,12 +1,12 @@
 +++
 date = '2025-08-18T14:21:51+08:00'
 draft = false
-title = '法国之路 - Camino Francés Route'
+title = '朝圣之路 - Camino Francés Route'
 categories = '行者无疆'
 tags =['徒步','西班牙']
 [params]
     author = 'Homeat'
-    thumbnail = 'https://thumbs.dreamstime.com/z/way-st-james-map-camino-de-santiago-84159940.jpg'
+    thumbnail = 'https://www.my-camino.eu/wp-content/uploads/2020/09/Camino-Frances-1024x400.jpg'
 +++
 
 法国之路（Camino Francés）是朝圣之路中最经典、最受欢迎的路线，全程约800公里，起点在法国境内的圣让-皮耶德波尔（Saint-Jean-Pied-de-Port），终点是西班牙的圣地亚哥-德孔波斯特拉（Santiago de Compostela）。
@@ -17,7 +17,7 @@ tags =['徒步','西班牙']
 
 法国之路的一般行程，通常分为30-35天完成，每天徒步约20-25公里。
 
-![法国之路](https://thumbs.dreamstime.com/z/way-st-james-map-camino-de-santiago-84159940.jpg "法国之路路线图")
+![法国之路](https://www.my-camino.eu/wp-content/uploads/2020/09/Camino-Frances-1024x400.jpg "法国之路路线图")
 
 <div class="table-container">
 
