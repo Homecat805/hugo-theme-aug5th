@@ -1,7 +1,7 @@
 {{ define "stager" }}
 <main>
     <div id="breadcrumb" class="container">
-        {{ partial "breadcrumb.html" . }}
+        {{ partial "components/breadcrumb.html" . }}
     </div>
     <div id="page" class="container">
         <article class="page">
@@ -29,6 +29,7 @@
 </main>
 
 <aside>
-    <p>aside</p>
+    <div id="aside-container">
+       {{ partial "components/related.html" . }}
 </aside>
 {{ end }}

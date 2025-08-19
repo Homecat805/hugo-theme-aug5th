@@ -1,7 +1,25 @@
-{{ define "main" }}
-  <h1>{{ .Title }}</h1>
-  {{ .Content }}
-  {{ range .Pages }}
-    <h2><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h2>
-  {{ end }}
+{{ define "stager" }}
+<main>
+    <div id="breadcrumb" class="container">
+        {{ partial "components/breadcrumb.html" . }}
+    </div>
+    <div id="masonry" class="container">
+        <div class="masonry">
+        {{ range .Pages }}
+            <div class="masonry-item">
+                {{ with .Params.thumbnail }}
+                        <img src="{{.}}">
+                {{ end }}
+                <a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>
+                <p>{{.Summary}}</p>
+            </div>
+        {{ end }}
+        </div>
+    </div>
+</main>
+<aside>
+    <div id="aside-container">
+       {{ partial "components/taxonomy.html" . }}
+    </div>
+</aside>
 {{ end }}
