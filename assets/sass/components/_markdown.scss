@@ -1,6 +1,11 @@
 .markdown {
 
-
+    a {
+        color: var(--primary-400);
+        &:hover {
+            color: var(--primary-600);
+        }
+    }
 
 
     // 引用
@@ -128,7 +133,7 @@
 
     // 标记
     mark {
-        background-color: var(--primary-500);
+        background-color: var(--primary-400);
         color: var(--white);
         padding: 0 .25rem;
     }
