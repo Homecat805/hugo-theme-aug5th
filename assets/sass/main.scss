@@ -17,11 +17,14 @@
 @use 'components/page';
 @use 'components/card';
 
-// 5.特殊页面
+// 5.短代码
+@use 'shortcodes/figure';
+
+// 6.特殊页面
 @use 'pages/about';
 
-// 6. 主题
+// 7. 主题
 @use 'themes/root';
 @use 'themes/red';
 
-// 7. 第三方
+// 8. 第三方

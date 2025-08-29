@@ -1,0 +1,14 @@
+figure {
+    margin-top: 1.5rem;
+    img {
+        display: block;
+        margin-bottom: -.875rem;
+    }
+
+    figcaption {
+        p {
+            font-size: .875rem;
+            color: var(--slate-600);
+        }
+    }
+}
